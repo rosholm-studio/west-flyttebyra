@@ -11,7 +11,6 @@
     onMount(() => {
         container = document.querySelector('nav .container');
         offset = `margin-top: ${container.offsetHeight}px;`;
-        console.log(container.offsetHeight)
     })
 </script>
 

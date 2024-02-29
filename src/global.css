@@ -115,6 +115,11 @@ button.custom {
     color: unset;
 }
 
+button img {
+    user-select: none;
+    pointer-events: none;
+}
+
 
 
 .xxl {

@@ -3,7 +3,6 @@
     let displayedItem = [];
     let displayedCount = [];
     let displayedSize = calculatorItems.map(obj => obj.size);
-    let total;
 
     let result = 0;
 
@@ -19,11 +18,11 @@
         if ((displayedCount[index] === 0 && bool === true) ||
             (displayedCount[index] === 1 && bool === false)) 
             displayedItem[index].classList.toggle('active');
-        
     }
 
     function changeCount(index, amount) {
-        if (displayedCount[index]<99) displayedCount[index] += amount;
+        if (displayedCount[index]===99 && amount === 1) return;
+        displayedCount[index] += amount;
     }
 
 </script>
@@ -48,14 +47,13 @@
         </div>
     {/each}
 </div>
+
 <div class="menu">
     <p class="s">Estimert volum</p>
-    <button class="inverted">Få tilbud på {result} m³</button>
+    <button class="inverted ml">Få tilbud på {result.toFixed(1)} m³</button>
 </div>
 
-
 <style>
-
     .item {
         display: flex;
         align-items: end;

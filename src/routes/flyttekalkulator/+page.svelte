@@ -7,14 +7,14 @@
             size: 2
         },
         {
-            image: '/bed.svg',
-            title: 'Seng',
-            size: 2
+            image: '/sofa.svg',
+            title: 'Sofa',
+            size: 1.4
         },
         {
-            image: '/bed.svg',
-            title: 'Seng',
-            size: 2
+            image: '/spisebord.svg',
+            title: 'Spisebord',
+            size: 0.8
         }
     ];
     
