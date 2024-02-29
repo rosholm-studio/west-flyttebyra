@@ -1,0 +1,230 @@
+:root {
+    /* Colors */
+
+    --primary-color: #00205B;
+    --secondary-color: #EDFAFD;
+    --tertiary-color: #fff;
+
+    --background: #fff;
+    --background-secondary: #F9F9F9;
+
+    --primary-text: #fff;
+    --primary-text-heavy: rgb(255, 255, 255, .6);
+    --primary-text-medium: rgb(255, 255, 255, .5);
+    
+    --inverted-text: #000;
+    --inverted-text-medium: rgb(0, 0, 0, .5);
+    --inverted-text-light: rgb(0, 0, 0, .3);
+
+    --secondary-text: var(--primary-color);
+
+    --primary-accent: #FFD913;
+    --secondary-accent: #006C0E;
+
+    --border: #000;
+    --border-medium: rgb(0, 0, 0, .5);
+    --border-light: rgb(0, 0, 0, .15);
+
+    --inverted-border: #fff;
+    --inverted-border-medium: rgb(255, 255, 255, .5);
+    --inverted-border-light: rgb(255, 255, 255, .15);
+
+    --divider-light: var(--border-light);
+
+    /* Typography */
+
+    --text-display: 49px;
+    --text-xxxl: 39px;
+    --text-xxl: 33px;
+    --text-xl: 27px;
+    --text-l: 21px;
+    --text-ml: 17px;
+    --text-m: 16px;
+    --text-ms: 15px;
+    --text-s: 14px;
+    
+    --spacing-display: -1.09px;
+    --spacing-xxxl: -0.86px;
+    --spacing-xxl: -0.72px;
+    --spacing-xl: -0.56px;
+    --spacing-l: -0.37px;
+    --spacing-ml: -0.22px;
+    --spacing-m: -0.18px;
+    --spacing-ms: -0.13px;
+    --spacing-s: -0.09px;
+
+    --weight-bold: 600;
+    --weight-medium: 500;
+    --weight-regular: 400;
+}
+
+/* body, html {
+    background: var(--primary-color);
+} */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    outline-offset: -1px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+u {
+    text-underline-offset: 2px;
+    text-decoration: 1px underline;
+}
+
+main {
+    background: var(--primary-color);
+}
+
+input {
+    border: none;
+}
+
+button {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 12px 20px;
+    font-weight: var(--weight-medium);
+    border-radius: 100px;
+    border: none;
+    outline: 1px solid var(--border-medium);
+    line-height: 110%;
+}
+
+button.inverted {
+    background: var(--primary-color);
+    color: var(--tertiary-color);
+}
+
+.fw {
+    width: 100%;
+}
+
+button.custom {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    color: unset;
+}
+
+
+
+.xxl {
+    font-size: var(--text-xxl);
+    letter-spacing: var(--spacing-xxl);
+}
+
+.xl {
+    font-size: var(--text-xl);
+    letter-spacing: var(--spacing-xl);
+}
+
+.l {
+    font-size: var(--text-l);
+    letter-spacing: var(--spacing-l);
+}
+
+.ml {
+    font-size: var(--text-ml);
+    letter-spacing: var(--spacing-ml);
+}
+
+.m {
+    font-size: var(--text-m);
+    letter-spacing: var(--spacing-m);
+}
+
+.ms {
+    font-size: var(--text-ms);
+    letter-spacing: var(--spacing-ms);
+}
+
+.s {
+    font-size: var(--text-s);
+    letter-spacing: var(--spacing-s);
+}
+
+
+.op-h {
+    opacity: .6;
+}
+.op-m {
+    opacity: .5;
+}
+.op-l {
+    opacity: .3;
+}
+
+.we-b {
+    font-weight: var(--weight-bold);
+}
+
+.we-m {
+    font-weight: var(--weight-medium);
+}
+
+.we-r {
+    font-weight: var(--weight-regular);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 20px;
+    gap: 20px;
+    outline: 1px solid var(--border-light);
+    background: var(--background);
+    color: var(--inverted-text);
+}
+
+form button {
+    width: 100%;
+    height: 50px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.form-item label {
+    font-size: var(--text-s);
+    letter-spacing: var(--spacing-s);
+}
+
+.form-item div {
+    display: flex;
+    gap: 10px;
+}
+
+.form-item div input:first-child {
+    width: 62px;
+}
+
+.form-item input {    
+    width: 100%;
+    outline: 1px solid var(--border-medium);
+    border-radius: 10px;
+    padding: 0 16px;
+    height: 50px;
+} 
+
+h3 {
+    line-height: 150%;
+}
+
+
+p {
+    line-height: 150%;
+}
