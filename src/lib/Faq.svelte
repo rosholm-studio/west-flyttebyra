@@ -23,6 +23,11 @@
 
 
 <style>
+    .container {
+        max-width: 840px;
+        width: 100%;
+    }
+
     .container.inverted * {
         color: var(--inverted-text);
     }

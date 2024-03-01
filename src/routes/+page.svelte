@@ -53,7 +53,7 @@
             <p class="s op-m">fra google reviews</p>
         </div>
     </div>
-    <form action="submit">
+    <form>
         <div class="form-item">
             <label for="fra">Flytte Fra</label>
             <input type="text" id="fra" placeholder="Karl Johans gate 0">
@@ -100,7 +100,7 @@
         </div>
         <div class="btns fw">
             <a href="/"><button class="fw">Kontakt oss</button></a>
-            <a href="/"><button class="fw inverted">Få tilbud</button></a>
+            <a href="/tilbud"><button class="fw inverted">Få tilbud</button></a>
         </div>
     </div>
 </section>
@@ -127,8 +127,7 @@
             <h4 class="xl">Punktlig og effektiv</h4>
             <p class="ml op-m">Vi respekterer tiden din</p>
         </div>
-    </div>
-    <div>
+
         <div class="item">
             <img src="/card.svg" alt="Credit card">
             <h4 class="xl">Økonomisk</h4>
@@ -140,13 +139,12 @@
             <p class="ml op-m">Flyttebyrå med lang og bred erfaring</p>
         </div>
     </div>
-    <button class="inverted fw">Få tilbud</button>
 </section>
 <section class="cta">
     <div>
         <h5 class="xl we-b">Har du prøvd vår nye flyttekalkulator?</h5>
         <p class="ml">Legg inn tingene dine, så prøver vi å fikse en fast pris til deg.</p>
-        <button>Flyttekalkulator</button>
+        <a href="/flyttekalkulator"><button class="small">Flyttekalkulator</button></a>
     </div>
 </section>
 <section class="reviews">
@@ -159,9 +157,9 @@
 <section class="faq inverted">
     <h2 style="color: {faqArrayTwo[0]}" class="xl we-m">Ofte stilte spørsmål</h2>
     <Faq faqArray={faqArrayTwo} />
-    <div>
+    <div class="faq-btns">
         <button class="fw">Kontakt oss</button>
-        <button class="inverted fw">Få tilbud</button>
+        <a href="/tilbud"><button class="inverted fw">Få tilbud</button></a>
     </div>
     
 </section>
@@ -302,15 +300,22 @@
         color: var(--inverted-text)
     }
 
-    .faq.inverted>div {
+    .faq-btns {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
         gap: 8px;
+        width: 100%;
     }
 
-    .faq.inverted>div button {
+    .faq-btns button {
         height: 55px;
         background: var(--background);
+    }
+
+    .faq-btns .fw{
+        max-width: 350px;
     }
 
     .faq>div button.inverted {
@@ -320,25 +325,30 @@
     .info {
         background: var(--secondary-color);
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 40px;
         padding: 60px 16px 40px 16px;
     }
 
     .info>div {
         display: flex;
-        flex-direction: column;
-        gap: 40px;
         width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        max-width: 900px;
     }
 
     .info .item {
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
         padding: 20px;
+        width: 100%;
+        max-width: 370px;
     }
 
     .info img {
@@ -352,12 +362,15 @@
 
     .info button {
         height: 55px;
+        max-width: 350px;
     }
 
     .cta {
         background: var(--secondary-color);
         padding: 40px 16px;
-        color: var(--primary-color)
+        color: var(--primary-color);
+        display: flex;
+        justify-content: center;
     }
 
     .cta>div {
@@ -367,6 +380,8 @@
         flex-direction: column;
         gap: 20px;
         background: var(--background);
+        width: 100%;
+        max-width: 600px;
     }
 
     .cta button {
@@ -416,6 +431,25 @@
         .content h2 {
             font-size: var(--text-xxxl);
             letter-spacing: var(--spacing-xxxl);
+        }
+    }
+
+    @media screen and (min-width: 550px) {
+        .faq {
+            align-items: center;
+        }
+
+        .cta>div {
+            align-items: center;
+        }
+
+        .faq-btns {
+            flex-wrap: nowrap;
+            max-width: 350px;
+        }
+
+        .faq-btns .fw {
+            width: 50%;
         }
     }
 

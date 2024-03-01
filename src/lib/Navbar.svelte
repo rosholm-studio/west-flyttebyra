@@ -1,4 +1,7 @@
 <script>
+    import { onNavigate } from "$app/navigation";
+    onNavigate(() => menuOpen = false)
+
     let menuOpen = false;
     let container;
 </script>
@@ -7,14 +10,16 @@
     <div class="container" bind:this={container}>
         <a href="/"><img src="/logo.svg" alt="" class="logo"></a>
         <div class="btns">
+            <a href="/" class="m hide">Hjem</a>
+            <a href="/om-oss" class="m hide">Om oss</a>
             <a href="/flyttekalkulator"><button class="s">Flyttekalkulator</button></a>
             <button class="burger custom" on:click={() => menuOpen = !menuOpen}></button>
         </div>
     </div>
     <div class="menu" class:active={menuOpen}>
-        <a href="/">Hjem</a>
-        <a href="/om-oss">Om oss</a>
-        <a href="/flyttekalkulator">Flyttekalkulator</a>
+        <a href="/" class="l">Hjem</a>
+        <a href="/om-oss" class="l">Om oss</a>
+        <a href="/flyttekalkulator" class="l">Flyttekalkulator</a>
         <button class="inverted s">+47 926 47 084</button>
     </div>
 </nav>
@@ -46,6 +51,10 @@
         display: flex;
         align-items: center;
         gap: 20px;
+    }
+
+    .btns a {
+        white-space: nowrap;
     }
 
     .btns button {
@@ -85,12 +94,24 @@
     a {
         color: var(--primary-text);
         font-weight: var(--weight-medium);
-        font-size: var(--text-l);
-        letter-spacing: var(--spacing-l);
     }
 
     .menu button {
         margin-top: 32px;
+        outline: 1px solid var(--inverted-border-medium);
     }
 
+    .hide {
+        display: none;
+    }
+
+    @media screen and (min-width: 600px) {
+        .hide {
+            display: flex;
+        }
+
+        .burger {
+            display: none;
+        }
+    }
 </style>

@@ -58,9 +58,9 @@
     --weight-regular: 400;
 }
 
-/* body, html {
+body, html {
     background: var(--primary-color);
-} */
+}
 
 * {
     padding: 0;
@@ -80,20 +80,24 @@ u {
 
 main {
     background: var(--primary-color);
+    margin: 0;
+    gap: 0;
+    padding: 0;
 }
 
 input {
     border: none;
 }
 
+
 button {
-    background: var(--secondary-color);
+    background: var(--background);
     color: var(--primary-color);
     padding: 12px 20px;
     font-weight: var(--weight-medium);
     border-radius: 100px;
     border: none;
-    outline: 1px solid var(--border-medium);
+    outline: 1px solid var(--primary-color);
     line-height: 110%;
 }
 
@@ -101,6 +105,15 @@ button.inverted {
     background: var(--primary-color);
     color: var(--tertiary-color);
 }
+
+button.small {
+    font-size: var(--text-s);
+    height: 44px;
+    padding: 0 20px;
+    border-radius: 100px;
+    background: var(--secondary-color);
+}
+
 
 .fw {
     width: 100%;
@@ -196,6 +209,18 @@ form button {
     height: 50px;
 }
 
+form .checkbox input {
+    background: var(--background);
+    color: rgb(0, 0, 0, .3);
+}
+
+form .checkbox input.active {
+    outline-width: 2px;
+    color: var(--inverted-text);
+}
+
+
+
 .form-item {
     display: flex;
     flex-direction: column;
@@ -233,3 +258,10 @@ h3 {
 p {
     line-height: 150%;
 }
+
+.divider {
+    min-height: 1px;
+    min-width: 1px;
+    background: var(--border-light);
+}
+

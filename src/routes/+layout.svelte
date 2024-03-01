@@ -1,4 +1,4 @@
-<script>
+<script>;
     import "@fontsource/inter";
     import "../global.css";
     import Navbar from "$lib/Navbar.svelte";
@@ -12,6 +12,8 @@
         container = document.querySelector('nav .container');
         offset = `margin-top: ${container.offsetHeight}px;`;
     })
+
+    
 </script>
 
 <div>

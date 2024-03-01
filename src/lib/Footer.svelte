@@ -9,7 +9,7 @@
 
 <footer>
     <div class="container">
-        <img class="icon" src="/icon.svg" alt="West Icon">
+        <a href="/"><img class="icon" src="/icon.svg" alt="West Icon"></a>
         <div class="items">
             <div class="item">
                 <p class="m we-b">West Flyttebyrå</p>
@@ -51,13 +51,13 @@
     .container {
         display: flex;
         flex-direction: column;
-        gap: 60px;
+        gap: 65px;
     }
 
     .items {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 63px;
     }
 
     .icon {
@@ -81,14 +81,33 @@
     }
 
     .up {
+        height: fit-content;
         display: flex;
         align-items: center;
     }
 
     .bottom {
-        padding: 80px 0;
+        padding-top: 80px;
         display: flex;
         flex-direction: column;
         gap: 24px; 
+    }
+
+    @media screen and (min-width: 550px) {
+        .items {
+            flex-direction: row;
+        }
+
+        .bottom {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        .container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 </style>

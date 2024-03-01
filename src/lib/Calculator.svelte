@@ -1,4 +1,5 @@
 <script>
+    import { browser } from '$app/environment';
     export let calculatorItems = {};
     let displayedItem = [];
     let displayedCount = [];
@@ -12,6 +13,10 @@
 
     $: if (displayedCount) {
         result = displayedCount.map((val, i) => val * displayedSize[i]).reduce((sum, val) => sum + val, 0);
+    }
+
+    $: if (browser) {
+        localStorage.setItem('result', result.toFixed(1));
     }
 
     function toggleItem(index, bool) {
@@ -32,7 +37,7 @@
         <div class="item" bind:this={displayedItem[index]}>
             <div class="left">
                 <div class="image">
-                    <img src={item.image} alt="{item.title} image">
+                    <img src="/furniture/{item.image}" alt="{item.title} image">
                 </div>
                 <div class="desc">
                     <p class="ml we-m">{item.title}</p>
@@ -50,10 +55,15 @@
 
 <div class="menu">
     <p class="s">Estimert volum</p>
-    <button class="inverted ml">Få tilbud på {result.toFixed(1)} m³</button>
+    <a href="/tilbud"><button class="inverted ml">Få tilbud på {result.toFixed(1)} m³</button></a>
 </div>
 
 <style>
+    .calculator {
+        width: 100%;
+        max-width: 640px;
+    }
+
     .item {
         display: flex;
         align-items: end;
