@@ -12,7 +12,7 @@
         <div class="item" class:active={activeIndex === index}>
             <button class="question custom" on:click={() => toggleActive(index)}>
                 <h3 class="we-m ml">{question}</h3>
-                <div></div>
+                <div class="plusminus"></div>
             </button>
             <div class="answer">
                 <p class="ml op-m we-r">{answer}</p>
@@ -54,7 +54,7 @@
         gap: 20px;
     }
 
-    .question>div {
+    .plusminus {
         position: relative;
         display: flex;
         justify-content: center;
@@ -63,37 +63,35 @@
         min-width: 19px;
     }
 
-    .question>div::before, .question>div::after {
+    .plusminus::before, .plusminus::after {
         position: absolute;
         content: '';
-        background: var(--primary-text)
-    }
-
-    .container.inverted .question>div::before, .container.inverted .question>div::after {
-        background: var(--inverted-text)
-    } 
-
-    .question>div::before {
-        height: 1px;
-        width: 19px;
-    }
-
-    .question>div::after {
-        width: 1px;
-        height: 19px;
+        background: var(--primary-text);
         transition-duration: 100ms;
     }
 
-    .item.active .question>div::after {
-        transform: rotate(90deg);
+    .container.inverted .plusminus::before, .container.inverted .plusminus::after {
+        background: var(--inverted-text)
+    } 
+
+    .plusminus::before {
+        height: 1px;
+        width: 19px;
+        
+    }
+
+    .plusminus::after {
+        width: 1px;
+        height: 19px;
+        
+    }
+
+    .item.active .plusminus::after {
+        transform: rotate(-90deg);
     }
 
     .question h3 {
         color: inherit;
-    }
-
-    .item.active .question>div {
-        background: url('/minus.svg');
     }
 
     .answer {

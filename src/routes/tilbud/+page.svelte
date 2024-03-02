@@ -2,6 +2,9 @@
     import { onMount } from "svelte";
     let result;
     onMount(() => result = localStorage.getItem('result'))
+
+    let fraHeis = false;
+    let tilHeis = false;
 </script>
 
 <section class="hero">
@@ -31,8 +34,8 @@
         <div class="form-item">
             <label for="fra-heis">Heis</label>
             <div class="checkbox">
-                <input  type="button" id="fra-heis" value="Ja">
-                <input  type="button" id="fra-heis" value="Nei">
+                <input class:active={fraHeis} type="button" id="fra-heis" value="Ja" on:click={() => fraHeis = true}>
+                <input class:active={!fraHeis} type="button" id="fra-heis" value="Nei" on:click={() => fraHeis = false}>
             </div>
         </div>
         <div></div>
@@ -57,8 +60,8 @@
         <div class="form-item">
             <label for="til-heis">Heis</label>
             <div class="checkbox">
-                <input  type="button" id="til-heis" value="Ja">
-                <input  type="button" id="til-heis" value="Nei">
+                <input class:active={tilHeis} type="button" id="til-heis" value="Ja" on:click={() => tilHeis = true}>
+                <input class:active={!tilHeis} type="button" id="til-heis" value="Nei" on:click={() => tilHeis = false}>
             </div>
         </div>
         <div></div>

@@ -99,6 +99,7 @@ button {
     border: none;
     outline: 1px solid var(--primary-color);
     line-height: 110%;
+    touch-action: manipulation;
 }
 
 button.inverted {

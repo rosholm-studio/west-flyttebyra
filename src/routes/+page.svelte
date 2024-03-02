@@ -158,8 +158,8 @@
     <h2 style="color: {faqArrayTwo[0]}" class="xl we-m">Ofte stilte spørsmål</h2>
     <Faq faqArray={faqArrayTwo} />
     <div class="faq-btns">
-        <button class="fw">Kontakt oss</button>
-        <a href="/tilbud"><button class="inverted fw">Få tilbud</button></a>
+        <a class="fw" href="/"><button class="fw">Kontakt oss</button></a>
+        <a class="fw" href="/tilbud"><button class="inverted fw">Få tilbud</button></a>
     </div>
     
 </section>
@@ -271,6 +271,7 @@
     .carousel {
         display: flex;
         flex-direction: column;
+        align-items: center;
         padding: 60px 0;
         background: var(--background);
     }
@@ -445,10 +446,11 @@
 
         .faq-btns {
             flex-wrap: nowrap;
-            max-width: 350px;
+            display: flex;
+            max-width: 400px;
         }
 
-        .faq-btns .fw {
+        .faq-btns>a {
             width: 50%;
         }
     }
