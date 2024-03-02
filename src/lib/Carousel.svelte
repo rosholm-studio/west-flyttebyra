@@ -27,13 +27,11 @@
     .carousel {
         position: relative;
         width: 100%;
-        max-width: 800px;
+        max-width: 900px;
     }
 
     .carousel::before, .carousel::after {
         content: '';
-
-
         position: absolute;
         z-index: 3;
         width: 10px;

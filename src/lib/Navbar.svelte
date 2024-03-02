@@ -13,15 +13,16 @@
             <a href="/" class="m hide">Hjem</a>
             <a href="/om-oss" class="m hide">Om oss</a>
             <a href="/flyttekalkulator"><button class="s">Flyttekalkulator</button></a>
-            <button class="burger custom" on:click={() => menuOpen = !menuOpen}></button>
+            <button class="burger custom" class:active={menuOpen} on:click={() => menuOpen = !menuOpen}></button>
         </div>
     </div>
     <div class="menu" class:active={menuOpen}>
         <a href="/" class="l">Hjem</a>
         <a href="/om-oss" class="l">Om oss</a>
         <a href="/flyttekalkulator" class="l">Flyttekalkulator</a>
-        <button class="inverted s">+47 926 47 084</button>
+        <a href="tel:+47 926 47 084"><button class="inverted s">+47 926 47 084</button></a>
     </div>
+    <button class="close custom" class:active={menuOpen} on:touchstart={() => menuOpen = false} on:click={() => menuOpen = false}></button>
 </nav>
 
 <style>
@@ -36,6 +37,7 @@
     
     .container {
         padding: 12px 20px;
+        padding-right: 0;
         background: var(--primary-color);
         display: flex;
         justify-content: space-between;
@@ -50,7 +52,6 @@
     .btns {
         display: flex;
         align-items: center;
-        gap: 20px;
     }
 
     .btns a {
@@ -68,14 +69,25 @@
         align-items: center;
         height: 100%;
         width: 100%;
+        padding: 10px 20px;
         gap: 9px;
     }
 
     .burger::before, .burger::after {
         content: '';
+        transform-origin:89%;
         width: 20px;
-        height: 1px;
-        background: var(--tertiary-color)
+        height: 2px;
+        background: var(--tertiary-color);
+        transition-duration: 100ms;
+    }
+
+    .burger.active::before {
+        transform: rotate(-45deg);
+    }
+
+    .burger.active::after {
+        transform: rotate(45deg);
     }
 
     .menu {
@@ -105,7 +117,26 @@
         display: none;
     }
 
+    .close {
+        display: none;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .close.active {
+        display: block;
+    }
+
     @media screen and (min-width: 600px) {
+        .container {
+            padding-right: 20px;
+        }
+
+        .btns {
+            gap: 20px;
+        }
+
         .hide {
             display: flex;
         }
