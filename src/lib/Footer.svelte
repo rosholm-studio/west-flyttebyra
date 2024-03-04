@@ -8,20 +8,24 @@
 </script>
 
 <footer>
+    <div class="logo">
+        <a href="/"><img class="icon" src="/logo.svg" alt="West Icon"></a>
+    </div>
+    
     <div class="container">
-        <a href="/"><img class="icon" src="/icon.svg" alt="West Icon"></a>
         <div class="items">
             <div class="item">
                 <p class="m we-b">West Flyttebyrå</p>
                 <a class="m" href="/">Hjem</a>
-                <a class="m" href="/flyttekalkulator">Flyttekalkulator</a>
+                <a class="m" href="/flyttekalkulator">Kalkulator</a>
+                <a class="m" href="/flyttekalkulator">Kontakt oss</a>
                 <a class="m" href="/om-oss">Om oss</a>
-                <a class="m" href="/">Vilkår</a>
-                <a class="m" href="/">Personvern</a>
+                <a class="m" href="/vilkar">Vilkår</a>
+                <a class="m" href="/personvern">Personvern</a>
             </div>
             <div class="item">
                 <p class="m we-b">Kontakt</p>
-                <a class="m" href="tel:+6494461709">+47 926 47 084</a>
+                <a class="m" href="tel:+4792647084">+47 926 47 084</a>
                 <a href="mailto:post@westflyttebyra.no">post@westflyttebyra.no</a>
                 <p class="m">Ole Deviks vei 35,<br/> 0668 Oslo</p>
                 <p class="m">Org nr 918 580 999</p>
@@ -33,36 +37,47 @@
                 <p class="m" href="/">Linkedin</p>
             </div>
         </div>
-        <a href="#" on:click|preventDefault={scrollUp} class="m up">Tilbake til toppen <img class="arrow" src="/arrow.svg" alt="Arrow up"></a>
+        <button on:click|preventDefault={scrollUp} class="m up btn-unset">Tilbake til toppen <img class="arrow" src="/arrow.svg" alt="Arrow up"></button>
     </div>
     <div class="bottom">
-        <p class="m">Nettside av <a href="https://svift.studio/" target="_blank"><u>Svift</u>®</a></p>
         <p class="m">©2024 West Flyttebyrå AS</p>
+        <p class="m">Nettside av <a href="https://svift.studio/" target="_blank"><u>Svift</u>®</a></p>
     </div>
 </footer>
 
 <style>
     footer {
-        padding: 40px 20px;
-        background: var(--primary-color);
-        color: var(--primary-text)
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: var(--gap-large) 20px 20px 20px;
+        background: var(--secondary-color);
+        color: var(--primary-color);
     }
 
     .container {
+        width: 100%;
+        max-width: 1000px;
         display: flex;
         flex-direction: column;
-        gap: 65px;
+        justify-content: space-between;
+        gap: var(--gap-medium);
+        padding: var(--gap-medium) 0 var(--gap-small) 0;
     }
 
     .items {
         display: flex;
         flex-direction: column;
-        gap: 63px;
+        gap: var(--gap-medium);
+    }
+
+    .logo {
+        width: 100%;
+        max-width: 1000px;
     }
 
     .icon {
-        height: 83px;
-        width: 83px;
+        width: 57px;
     }
 
     .arrow {
@@ -76,10 +91,6 @@
         gap: 8px;
     }
 
-    a {
-        color: var(--primary-text)
-    }
-
     .up {
         height: fit-content;
         display: flex;
@@ -87,10 +98,13 @@
     }
 
     .bottom {
-        padding-top: 80px;
+        width: 100%;
+        max-width: 1000px;
         display: flex;
         flex-direction: column;
-        gap: 24px; 
+        padding-top: var(--gap-small);
+        gap: 8px;
+        border-top: 1px solid var(--border-light);
     }
 
     @media screen and (min-width: 550px) {
@@ -104,10 +118,15 @@
         }
     }
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 830px) {
         .container {
             flex-direction: row;
             justify-content: space-between;
+            padding: var(--gap-large) 0;
+        }
+
+        .items {
+            gap: 87px;
         }
     }
 </style>

@@ -35,27 +35,27 @@
 
     --text-display: 49px;
     --text-xxxl: 39px;
-    --text-xxl: 33px;
-    --text-xl: 27px;
-    --text-l: 21px;
-    --text-ml: 17px;
+    --text-xxl: 31px;
+    --text-xl: 25px;
+    --text-l: 20px;
     --text-m: 16px;
-    --text-ms: 15px;
-    --text-s: 14px;
+    --text-s: 13px;
     
     --spacing-display: -1.09px;
     --spacing-xxxl: -0.86px;
-    --spacing-xxl: -0.72px;
-    --spacing-xl: -0.56px;
-    --spacing-l: -0.37px;
-    --spacing-ml: -0.22px;
+    --spacing-xxl: -0.67px;
+    --spacing-xl: -0.5px;
+    --spacing-l: -0.33px;
     --spacing-m: -0.18px;
-    --spacing-ms: -0.13px;
-    --spacing-s: -0.09px;
+    --spacing-s: -0.04px;
 
     --weight-bold: 600;
     --weight-medium: 500;
     --weight-regular: 400;
+
+    --gap-large: 80px;
+    --gap-medium: 60px;
+    --gap-small: 40px;
 }
 
 body, html {
@@ -89,44 +89,16 @@ input {
     border: none;
 }
 
-
 button {
-    background: var(--background);
-    color: var(--primary-color);
-    padding: 12px 20px;
-    font-weight: var(--weight-medium);
-    border-radius: 100px;
-    border: none;
-    outline: 1px solid var(--primary-color);
-    line-height: 110%;
-    touch-action: manipulation;
-}
-
-button.inverted {
     background: var(--primary-color);
-    color: var(--tertiary-color);
-}
-
-button.small {
-    font-size: var(--text-s);
-    height: 44px;
-    padding: 0 20px;
+    color: var(--primary-text);
+    padding: 12px 20px;
+    font-weight: var(--weight-regular);
     border-radius: 100px;
-    background: var(--secondary-color);
-}
-
-
-.fw {
-    width: 100%;
-}
-
-button.custom {
-    background: none;
-    padding: 0;
-    border-radius: 0;
+    height: 55px;
     border: none;
     outline: none;
-    color: unset;
+    touch-action: manipulation;
 }
 
 button img {
@@ -134,7 +106,51 @@ button img {
     pointer-events: none;
 }
 
+.btn-secondary {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
 
+.btn-tertiary {
+    background: rgba(237, 250, 253, 0.15);
+    color: var(--secondary-color);
+}
+
+.btn-inverted {
+    background: var(--background);
+    color: var(--primary-color);
+}
+
+.btn-icon {
+    padding: 16px;
+}
+
+.btn-round {
+    padding: 0;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    height: unset;
+}
+
+.btn-unset {
+    height: unset;
+    width: unset;
+    padding: unset;
+    color: unset;
+    background: unset;
+    border: unset;
+    outline: unset;
+}
+
+.fw {
+    width: 100%;
+}
 
 .xxl {
     font-size: var(--text-xxl);
@@ -173,12 +189,15 @@ button img {
 
 
 .op-h {
+    display: inline;
     opacity: .6;
 }
 .op-m {
+    display: inline;
     opacity: .5;
 }
 .op-l {
+    display: inline;
     opacity: .3;
 }
 
@@ -260,9 +279,22 @@ p {
     line-height: 150%;
 }
 
+a {
+    color: inherit;
+}
+
 .divider {
     min-height: 1px;
     min-width: 1px;
     background: var(--border-light);
 }
 
+.carousel {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.carousel-cell {
+    height: 100%;
+}

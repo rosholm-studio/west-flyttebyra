@@ -10,12 +10,12 @@
 <div class="container" class:inverted="{faqArray[0]}">
     {#each Object.entries(faqArray[1]) as [question, answer], index}
         <div class="item" class:active={activeIndex === index}>
-            <button class="question custom" on:click={() => toggleActive(index)}>
-                <h3 class="we-m ml">{question}</h3>
+            <button class="question btn-unset" on:click={() => toggleActive(index)}>
+                <h3 class="we-m m">{question}</h3>
                 <div class="plusminus"></div>
             </button>
             <div class="answer">
-                <p class="ml op-m we-r">{answer}</p>
+                <p class="op-m we-r">{answer}</p>
             </div>
         </div>
     {/each}
@@ -24,7 +24,7 @@
 
 <style>
     .container {
-        max-width: 840px;
+        max-width: 1000px;
         width: 100%;
     }
 

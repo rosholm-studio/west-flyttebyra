@@ -53,7 +53,7 @@
     .carousel-cell {
         aspect-ratio: 3/4;
         width: 50%;
-        background: url("../../static/guy.png");
+        background: url("../../guy.png");
         background-position: center;
         background-size: cover;
         border-radius: 20px;
@@ -63,10 +63,6 @@
 
     .carousel-cell:not(.is-selected) {
         opacity: .5;
-    }
-
-    @media screen and (min-width: 900px) {
-        
     }
 
 </style>
