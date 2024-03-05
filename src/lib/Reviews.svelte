@@ -27,16 +27,15 @@
         const cachedReviews = localStorage.getItem('reviews');
         const cachedTimestamp = localStorage.getItem('reviewsTimestamp');
         const now = new Date(); 
-        if (cachedReviews && cachedTimestamp) {
+        if (true || cachedReviews && cachedTimestamp) {
             const lastFetched = new Date(cachedTimestamp);
             const diffInHours = (now - lastFetched) / (1000 * 60 * 60); 
-            if (diffInHours < 24) {
+            if (true || diffInHours < 24) {
                 console.log('Fetching from storage') 
                 reviews = JSON.parse(cachedReviews);
                 return;
             }
         }
-
         console.log('fetching from API')
         const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&reviews_no_translations=true&key=${apiKey}`);
         if (response.ok) {

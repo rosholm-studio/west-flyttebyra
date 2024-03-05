@@ -56,6 +56,10 @@
     --gap-large: 80px;
     --gap-medium: 60px;
     --gap-small: 40px;
+
+    /* misc */
+
+    --calc-footer: 0px;
 }
 
 body, html {
@@ -268,7 +272,21 @@ form .checkbox input.active {
     border-radius: 10px;
     padding: 0 16px;
     height: 50px;
-} 
+}
+
+.form-item input::placeholder, .form-item textarea::placeholder {
+    color: var(--inverted-text);
+    opacity: .3;
+}
+
+.form-item textarea {    
+    width: 100%;
+    outline: 1px solid var(--border-medium);
+    border-radius: 10px;
+    padding: 16px;
+    height: 100px;
+    resize: none;
+}
 
 h3 {
     line-height: 150%;
@@ -297,4 +315,13 @@ a {
 
 .carousel-cell {
     height: 100%;
+}
+
+.faq.inverted .container.inverted .item:last-child {
+    border-bottom: 0;
+}
+
+.rabatt {
+    border-radius: 100px;
+    width: fit-content;
 }

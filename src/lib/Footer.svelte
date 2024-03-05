@@ -1,4 +1,6 @@
 <script>
+    import { page } from '$app/stores';
+
     function scrollUp() {
         window.scroll({
             top: document.querySelector('main'),
@@ -7,7 +9,7 @@
     }
 </script>
 
-<footer>
+<footer class:special="{$page.url.pathname === '/flyttekalkulator'}">
     <div class="logo">
         <a href="/"><img class="icon" src="/logo.svg" alt="West Icon"></a>
     </div>
@@ -53,6 +55,10 @@
         padding: var(--gap-large) 20px 20px 20px;
         background: var(--secondary-color);
         color: var(--primary-color);
+    }
+
+    footer.special {
+        padding-bottom: calc(20px + var(--calc-footer));
     }
 
     .container {

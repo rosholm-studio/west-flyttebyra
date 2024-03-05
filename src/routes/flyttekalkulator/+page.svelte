@@ -1,7 +1,4 @@
 <script>
-    import { onMount } from "svelte";
-    import { page } from "$app/stores"
-    import { onNavigate } from "$app/navigation";
     import Calculator from "../../lib/Calculator.svelte";
     let items = [
         {
@@ -40,99 +37,69 @@
             size: 0.2
         }
     ];
-
-    onMount(() => {
-        calcFooter($page.url.pathname)
-    })
-
-    onNavigate((details) => {
-        calcFooter(details.to.route.id)
-    })
-
-    function calcFooter(path) {
-        path === '/flyttekalkulator' ? 
-            document.querySelector('footer').style.paddingBottom = '90px' : 
-            document.querySelector('footer').style.paddingBottom = '20px'
-    }
     
 </script>
 
 <section class="hero">
     <div class="header">
-        <h1 class="xxl we-b">Flyttekalkulator</h1>
+        <h1 class="xxl we-b">Få den beste prisen på flytting i Oslo-området</h1>
         <p class="ml">Vi kan benytte flyttekalkulator som utgangspunkt i en fastpris, men det er da viktig at du har fått med deg alt du skal flytte på oversikten.</p>
+        <div class="rabatt btn-inverted btn-small">10% rabatt idag 🎉</div>
+        
     </div>
     <Calculator calculatorItems={items} />
 </section>
-<section class="info">
-    <div class="info-container">
-        <p class="ml">
-            Har du noe som skal flyttes på som ikke finnes på flyttekalkulatoren? Se om du kan finne noe som har tilsvarende størrelse eller send en egen henvendelse med beskrivelse.
-            <br><br>
-            Vanskelig å estimere antall kartonger? I de fleste tilfeller har vi mer enn vi tror, så legg heller på noen ekstra, så kan det ev justeres når det nærmer seg flytt og du har pakket klart.
-        </p>
-        <div class="help">
-            <p class="l">Trenger du hjelp?</p>
-            <a href="tel:+4792647084"><button class="fw">+47 926 47 084</button></a>
-        </div>
-    </div>
-    
-</section>
+<div class="img-container">
+    <img src="/placeholder_calculator.png" alt="">
+</div>
 
 
 <style>
     .hero {
-        background: var(--background);
+        background: var(--secondary-color);
         color: var(--primary-color);
-        padding: 60px 24px;
+        padding: var(--gap-small) 24px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 40px;
+        gap: var(--gap-small);
     }
 
     .header {
         display: flex;
         flex-direction: column;
         gap: 24px;
-        max-width: 350px;
+        max-width: 1000px;
     }
-
-    .info {
-        background: var(--background);
-        padding: 80px 24px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .info-container {
-        border-radius: 20px;
-        padding: 40px;
+    .img-container {
         background: var(--secondary-color);
-        color: var(--primary-color);
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-        max-width: 700px;
+        overflow: hidden;
     }
 
-    .help {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
+    .img-container img {
+        max-height: 500px;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
     }
 
-    .help button {
-        height: 55px;
+    @media screen and (min-width: 800px) {
+        .hero {
+            padding: var(--gap-large) 24px;
+            gap: var(--gap-medium);
+        }
+        .header h1 {
+            font-size: var(--text-display);
+            letter-spacing: var(--spacing-display);
+        }
     }
-
-    
 
     @media screen and (min-width: 400px) {
+
         .header {
             align-items: center;
             text-align: center;
+            gap: var(--gap-small);
         }
 
         .help button.fw {

@@ -18,20 +18,6 @@
 </script>
 
 <nav>
-    <div class="info">
-        <a class="item" href="tel:+4792647084">
-            <img src="/icons/phone.svg" alt="phone svg">
-            <p class="s">+47 926 47 084</p>
-        </a>
-        <a class="item info-mail" href="mailto:post@westflyttebyra.no">
-            <img src="/icons/mail.svg" alt="mail svg">
-            <p class="s">post@westflyttebyra.no</p>
-        </a>
-        <div class="item info-time">
-            <img src="/icons/time.svg" alt="clock svg">
-            <p class="s">Åpent døgnet rundt</p>
-        </div>
-    </div>
     <div class="container" bind:this={container}>
         <a href="/"><img src="/logo.svg" alt="" class="logo"></a>
         <div class="links">
@@ -67,26 +53,6 @@
         top: 0;
         width: 100%;
         z-index: 10;
-    }
-
-    .info {
-        padding: 8px 24px;
-        display: flex;
-        gap: 40px;
-    }
-
-    .info .item {
-        display: flex;
-        gap: 8px;
-        color: var(--primary-text);
-    }
-
-    .info-mail {
-        display: none !important;
-    }
-
-    .info-time {
-        display: none !important;
     }
     
     .container {
@@ -161,7 +127,6 @@
         justify-content: space-between;
         align-items: end;
         background: var(--primary-color);
-        overflow-y: scroll;
         gap: 24px;
     }
     

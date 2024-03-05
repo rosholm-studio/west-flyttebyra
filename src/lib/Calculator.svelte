@@ -7,17 +7,17 @@
 
     let result = 0;
 
-    $: if (calculatorItems) {
-        displayedCount = new Array(calculatorItems.length).fill(0); 
-    }
-
+    $: if (calculatorItems) displayedCount = new Array(calculatorItems.length).fill(0);
     $: if (displayedCount) {
         result = displayedCount.map((val, i) => val * displayedSize[i]).reduce((sum, val) => sum + val, 0);
+        if (browser) calcFooter();
     }
-
-    $: if (browser) {
-        localStorage.setItem('result', result.toFixed(1));
+    $: if (browser) localStorage.setItem('result', result.toFixed(1));
+    $: if (browser) window.onresize = function () {
+        if (result===0) return;
+        calcFooter();
     }
+    $: if (browser) calcFooter();
 
     function toggleItem(index, bool) {
         if ((displayedCount[index] === 0 && bool === true) ||
@@ -28,6 +28,14 @@
     function changeCount(index, amount) {
         if (displayedCount[index]===99 && amount === 1) return;
         displayedCount[index] += amount;
+    }
+
+    let menu;
+
+    function calcFooter() {
+        if (!browser) return;
+        result>0 ? document.body.style.setProperty('--calc-footer', `${menu.clientHeight}px`) :
+        document.body.style.setProperty('--calc-footer', `0px`); 
     }
 
 </script>
@@ -52,16 +60,29 @@
         </div>
     {/each}
 </div>
-
-<div class="menu">
-    <p class="s">Estimert volum</p>
-    <a href="/tilbud"><button class="inverted ml">Få tilbud på {result.toFixed(1)} m³</button></a>
+<div class="menu footer-menu" bind:this="{menu}" class:active="{result>0}">
+    <div class="menu-container">
+        <div class="text">
+            <p class="s">Ditt estimerte volum:</p>
+            <p class="price xl">{result.toFixed(1)} m³</p>
+        </div>
+        
+        <div class="btns">
+            <a href="/tilbud"><button class="inverted ml">Få tilbud på {result.toFixed(1)} m³</button></a>
+            <a class="hide" href="/kontakt-oss"><button class="btn-inverted">Kontakt</button></a>
+        </div>
+        
+    </div>
 </div>
+
 
 <style>
     .calculator {
         width: 100%;
-        max-width: 640px;
+        max-width: 1000px;
+        background: var(--background);
+        padding: 6px 24px;
+        border-radius: 20px;
     }
 
     .item {
@@ -108,6 +129,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 8px;
+        height: fit-content
     }
 
     .right button img {
@@ -131,18 +153,73 @@
         display: block;
     }
 
-
     .menu {
+        visibility: hidden;
+        pointer-events: none;
+
+        display: flex;
         position: fixed;
-        bottom: 0;
+        bottom: -1px;
         left: 0;
         right: 0;
         border-top: 1px solid var(--border-light);
         background: rgba(255, 255, 255, 0.80);
         backdrop-filter: blur(10px);
-        padding: 12px 20px;
+        padding: 20px;
+        padding-bottom: 32px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu.active {
+        visibility: visible;
+        pointer-events: all;
+    }
+
+    .menu-container {
         display: flex;
+        width: 100%;
+        max-width: 1000px;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .menu .text {
+        display: flex;
+        flex-direction: column;
+    } 
+
+    .item:last-child {
+        border-bottom: 0;
+    }
+
+    .btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    @media screen and (min-width: 800px) {
+        .btns a.hide {
+            display: block;
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        .menu {
+            padding-bottom: 20px;
+        }
+
+        .menu .text {
+            flex-direction: row;
+            gap: 4px;
+        }
+
+        .menu .text p {
+            font-size: var(--text-xl);
+            letter-spacing: var(--spacing-xl);
+        }
     }
 </style>

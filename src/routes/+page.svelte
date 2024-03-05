@@ -35,8 +35,6 @@
 
 </script>
 
-
-
 <section class="landing">
     <div class="landing-content">
         <div class="rabatt btn-small btn-inverted">10% rabatt idag 🎉</div>
@@ -50,7 +48,6 @@
         <img src="/placeholder.jfif" alt="">
     </div>
 </section>
-
 <section class="content">
     <div class="content-text">
         <h2 class="xl">West flyttebyrå er ditt flyttebyrå i Oslo</h2>
@@ -122,14 +119,32 @@
     </div>    
     <Reviews {reviewCount} />
 </section>
-<section class="faq inverted">
-    <h2 style="color: {faqArrayTwo[0]}" class="xl we-m">Ofte stilte spørsmål</h2>
-    <Faq faqArray={faqArrayTwo} />
-    <div class="faq-btns">
-        <a class="fw" href="/"><button class="fw">Kontakt oss</button></a>
-        <a class="fw" href="/tilbud"><button class="inverted fw">Få tilbud</button></a>
+<section class="cta">
+    <div class="rabatt btn-inverted btn-small">10% rabatt idag 🎉</div>
+    <h2>Få et tilbud på din flytting idag</h2>
+    <div class="btns">
+        <a href="/flyttekalkulator"><button>Flyttekalkulator</button></a>
+        <a href="/kontakt-oss"><button class="btn-inverted">Kontakt</button></a>
     </div>
-    
+</section>
+<section class="img-divider">
+    <img src="/placeholder.png" alt="filled moving truck">
+</section>
+<section class="faq inverted">
+    <div class="faq-header">
+        <h2 class="xl we-m">Ofte stilte spørsmål</h2>
+        <p class="m we-r">Vi forstår at du kan ha spørsmål angående din kommende flytting. Derfor har vi satt sammen en liste over vanlige spørsmål og svar for å veilede deg gjennom prosessen.</p>
+    </div>
+    <div class="faq-container">
+        <Faq faqArray={faqArrayTwo} />
+    </div>
+</section>
+<section class="cta inverted">
+    <h3 class="xxl we-m">Kom i gang med flyttingen</h3>
+    <div class="btns">
+        <a href="/flyttekalkulator"><button class="btn-inverted">Flyttekalkulator</button></a>
+        <a href="/kontakt-oss"><button class="btn-tertiary">Kontakt</button></a>
+    </div>
 </section>
 
 
@@ -147,10 +162,6 @@
         gap: 24px;
         align-items: center;
         padding: var(--gap-small) 20px;
-    }
-
-    .landing .rabatt {
-        border-radius: 100px;
     }
 
     .landing h1 {
@@ -314,8 +325,25 @@
     }
 
     .faq.inverted {
-        background: var(--background-secondary);
-        color: var(--inverted-text)
+        background: var(--secondary-color);
+        color: var(--inverted-text);
+        gap: var(--gap-medium);
+    }
+
+    .faq.inverted .faq-header {
+        display: flex;
+        flex-direction: column;
+        color: var(--primary-color);
+        gap: 20px;
+        text-align: center;
+        align-items: center;
+        max-width: 450px;
+    }
+
+    .faq-container {
+        background: var(--background);
+        padding: 0 24px;
+        border-radius: 20px;
     }
 
     .faq-bottom {
@@ -361,6 +389,33 @@
         max-width: 480px;
     }
 
+    .cta {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: var(--gap-medium) 20px;
+        align-items: center;
+        text-align: center;
+        background: var(--secondary-color);
+        border-top: 1px solid var(--border-light);
+    }
+
+    .cta.inverted {
+        background: var(--primary-color);
+        color: var(--primary-text);
+    }
+
+    .img-divider {
+        background: var(--secondary-color);
+        max-height: 500px;
+    }
+
+    .img-divider img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+    }
+
     @media screen and (min-width: 1000px) {
         .info-container {
             flex-direction: row;
@@ -398,6 +453,15 @@
         .content h2 {
             font-size: var(--text-xxxl);
             letter-spacing: var(--spacing-xxxl);
+        }
+
+        .cta {
+            padding: var(--gap-large) 20px;
+            gap: 24px;
+        }
+
+        .faq-header {
+            gap: 24px;
         }
     }
 
