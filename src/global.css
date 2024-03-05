@@ -82,6 +82,7 @@ body, html {
     outline-offset: -1px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 u {
@@ -109,6 +110,7 @@ button {
     height: 55px;
     border: none;
     outline: none;
+    font-size: 16px;
     touch-action: manipulation;
 }
 
@@ -147,6 +149,8 @@ button img {
 .btn-small {
     padding: 8px 16px;
     height: unset;
+    font-size: var(--text-s);
+    letter-spacing: var(--spacing-s);
 }
 
 .btn-unset {
@@ -178,19 +182,9 @@ button img {
     letter-spacing: var(--spacing-l);
 }
 
-.ml {
-    font-size: var(--text-ml);
-    letter-spacing: var(--spacing-ml);
-}
-
 .m {
     font-size: var(--text-m);
     letter-spacing: var(--spacing-m);
-}
-
-.ms {
-    font-size: var(--text-ms);
-    letter-spacing: var(--spacing-ms);
 }
 
 .s {

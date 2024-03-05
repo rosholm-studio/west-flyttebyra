@@ -38,7 +38,7 @@
 <section class="landing">
     <div class="landing-content">
         <div class="rabatt btn-small btn-inverted">10% rabatt idag 🎉</div>
-        <h1>Vi gjør det <div class="op-m">enkelt</div> og <div class="op-m">rimelig</div> for deg å flytte i Oslo-området</h1>
+        <h1 class="we-m">Vi gjør det <div class="op-m">enkelt</div> og <div class="op-m">rimelig</div> for deg å flytte i Oslo-området</h1>
         <div class="landing-btn">
             <a href="/flyttekalkulator"><button>Flyttekalkulator</button></a>
             <p class="s op-h">La oss finne den beste prisen til deg</p>
@@ -344,7 +344,12 @@
     .faq-container {
         background: var(--background);
         padding: 0 24px;
+        width: 100%;
         border-radius: 20px;
+    }
+
+    .faq.inverted .faq-container {
+        max-width: 550px;
     }
 
     .faq-bottom {
