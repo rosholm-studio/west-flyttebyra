@@ -25,7 +25,7 @@
 
 <section class="hero">
     <div class="hero-text">
-        <h1 class="xxl we-b">Få ditt personlige tilbud {#if result>0}på <u>{result} m³</u>{/if}</h1>
+        <h1 class="xxl we-m">Få ditt personlige tilbud {#if result>0}på <u>{result} m³</u>{/if}</h1>
         <p class="m">Vi kan benytte flyttekalkulator som utgangspunkt i en fastpris, men det er da viktig at du har fått med deg alt du skal flytte på oversikten.</p>
         <div class="rabatt btn-inverted btn-small">10% rabatt idag 🎉</div>
     </div>
@@ -33,23 +33,19 @@
         <div class="hidden">
             {#if result>0}<input type="text" value="{result}" hidden>{/if}
         </div>
-        <h2 class="s we-m">Hvor flytter du fra?</h2>
+        <h2 class="m we-m">Hvor flytter du fra?</h2>
         <div class="divider fw"></div>
         <div class="form-item">
             <label for="fra-adresse">Adresse</label>
             <input type="text" id="fra-adresse" placeholder="Karl Johans gate 0">
         </div>
         <div class="form-item">
-            <label for="fra-til">Flytte til</label>
-            <input type="text" id="fra-til" placeholder="Solveien 1B">
+            <label for="fra-postnummer">Postnummer</label>
+            <input type="number" id="fra-postnummer" placeholder="0265">
         </div>
         <div class="form-item">
             <label for="fra-etasje">Etasje</label>
             <input type="number" id="fra-etasje" placeholder="3">
-        </div>
-        <div class="form-item">
-            <label for="fra-postnummer">Postnummer</label>
-            <input type="number" id="fra-postnummer" placeholder="0265">
         </div>
         <div class="form-item">
             <label for="fra-heis">Heis</label>
@@ -66,16 +62,12 @@
             <input type="text" id="til-adresse" placeholder="Karl Johans gate 0">
         </div>
         <div class="form-item">
-            <label for="til-til">Flytte til</label>
-            <input type="text" id="til-til" placeholder="Solveien 1B">
+            <label for="til-postnummer">Postnummer</label>
+            <input type="number" id="til-postnummer" placeholder="0265">
         </div>
         <div class="form-item">
             <label for="til-etasje">Etasje</label>
             <input type="number" id="til-etasje" placeholder="3">
-        </div>
-        <div class="form-item">
-            <label for="til-postnummer">Postnummer</label>
-            <input type="number" id="til-postnummer" placeholder="0265">
         </div>
         <div class="form-item">
             <label for="til-heis">Heis</label>
@@ -237,13 +229,14 @@
         justify-content: center;
         align-items: center;
         gap: 40px;
-        padding: 60px 16px 40px 16px;
+        padding: 60px 24px 40px 24px;
     }
 
     .info-container {
         display: flex;
         flex-direction: column;
         width: 100%;
+        max-width: 1030px;
         justify-content: center;
         align-items: center;
         border-top: 1px solid var(--border-light);
@@ -256,7 +249,6 @@
         gap: 20px;
         padding: 20px;
         width: 100%;
-        max-width: 350px;
     }
 
     .info img {

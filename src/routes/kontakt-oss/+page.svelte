@@ -31,7 +31,7 @@
         <p>Vi svarer vanligvis samme dag.</p>
     </div>
     <form>
-        <h2 class="s we-m">Kontaktskjema</h2>
+        <h2 class="m we-m">Kontaktskjema</h2>
         <div class="divider fw"></div>
         <div class="form-item">
             <label for="name">Navn</label>

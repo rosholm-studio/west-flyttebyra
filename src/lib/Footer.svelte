@@ -20,7 +20,7 @@
                 <p class="m we-b">West Flyttebyrå</p>
                 <a class="m" href="/">Hjem</a>
                 <a class="m" href="/flyttekalkulator">Kalkulator</a>
-                <a class="m" href="/flyttekalkulator">Kontakt oss</a>
+                <a class="m" href="/kontakt-oss">Kontakt oss</a>
                 <a class="m" href="/om-oss">Om oss</a>
                 <a class="m" href="/vilkar">Vilkår</a>
                 <a class="m" href="/personvern">Personvern</a>
@@ -52,13 +52,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: var(--gap-large) 20px 20px 20px;
+        padding: var(--gap-large) 20px 40px 20px;
         background: var(--secondary-color);
         color: var(--primary-color);
     }
 
     footer.special {
-        padding-bottom: calc(20px + var(--calc-footer));
+        padding-bottom: calc(40px + var(--calc-footer));
     }
 
     .container {

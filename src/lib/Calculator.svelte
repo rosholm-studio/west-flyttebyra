@@ -53,9 +53,9 @@
                 </div>
             </div>
             <div class="right">
-                <button class="hide custom" on:click={() => {toggleItem(index, false); changeCount(index, -1)}}><img src="/minus.svg" alt="minus"></button>
+                <button class="hide btn-unset" on:click={() => {toggleItem(index, false); changeCount(index, -1)}}><img src="/minus.svg" alt="minus"></button>
                 <p class="hide ml we-m count" bind:this={displayedCount}>{displayedCount[index] || 0}</p>
-                <button class="custom" on:click={() => {toggleItem(index, true); changeCount(index, 1)}}><img src="/plus.svg" alt="plus"></button>
+                <button class="btn-unset" on:click={() => {toggleItem(index, true); changeCount(index, 1)}}><img src="/plus.svg" alt="plus"></button>
             </div>
         </div>
     {/each}
@@ -79,7 +79,7 @@
 <style>
     .calculator {
         width: 100%;
-        max-width: 1000px;
+        max-width: 550px;
         background: var(--background);
         padding: 6px 24px;
         border-radius: 20px;
@@ -119,6 +119,7 @@
     .right {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 12px;
     }
 
@@ -129,7 +130,6 @@
         justify-content: center;
         align-items: center;
         border-radius: 8px;
-        height: fit-content
     }
 
     .right button img {
@@ -139,7 +139,7 @@
 
     .item.active .right button {
         background: var(--background);
-        border: 1px solid var(--border-light);
+        outline: 1px solid var(--border-light);
     }
     .item.active .right img {
         filter: invert(100%);
@@ -150,7 +150,7 @@
     }
 
     .item.active .right .hide {
-        display: block;
+        display: flex;
     }
 
     .menu {
@@ -166,7 +166,6 @@
         background: rgba(255, 255, 255, 0.80);
         backdrop-filter: blur(10px);
         padding: 20px;
-        padding-bottom: 32px;
         justify-content: center;
         align-items: center;
     }

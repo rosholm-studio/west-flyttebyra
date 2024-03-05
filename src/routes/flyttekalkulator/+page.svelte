@@ -69,7 +69,7 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
-        max-width: 1000px;
+        max-width: 550px;
     }
     .img-container {
         background: var(--secondary-color);

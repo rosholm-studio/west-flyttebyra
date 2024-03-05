@@ -2,7 +2,7 @@
     /* Colors */
 
     --primary-color: #00205B;
-    --secondary-color: #EDFAFD;
+    --secondary-color: #EEF4FF;
     --tertiary-color: #fff;
 
     --background: #fff;
@@ -245,7 +245,6 @@ form .checkbox input.active {
 }
 
 
-
 .form-item {
     display: flex;
     flex-direction: column;
@@ -278,6 +277,8 @@ form .checkbox input.active {
 .form-item input::placeholder, .form-item textarea::placeholder {
     color: var(--inverted-text);
     opacity: .3;
+    font-size: var(--text-m);
+    letter-spacing: var(--spacing-m);
 }
 
 .form-item textarea {    

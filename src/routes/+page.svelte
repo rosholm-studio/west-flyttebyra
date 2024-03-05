@@ -120,12 +120,15 @@
     <Reviews {reviewCount} />
 </section>
 <section class="cta">
-    <div class="rabatt btn-inverted btn-small">10% rabatt idag 🎉</div>
-    <h2 class="we-m l">Få et tilbud på din flytting idag</h2>
-    <div class="btns">
-        <a href="/flyttekalkulator"><button>Flyttekalkulator</button></a>
-        <a href="/kontakt-oss"><button class="btn-inverted">Kontakt</button></a>
+    <div class="cta-container">
+        <div class="rabatt btn-inverted btn-small">10% rabatt idag 🎉</div>
+        <h2 class="we-m l">Få et tilbud på din flytting idag</h2>
+        <div class="btns">
+            <a href="/flyttekalkulator"><button>Flyttekalkulator</button></a>
+            <a href="/kontakt-oss"><button class="btn-inverted">Kontakt</button></a>
+        </div>
     </div>
+    
 </section>
 <section class="img-divider">
     <img src="/placeholder.png" alt="filled moving truck">
@@ -140,11 +143,14 @@
     </div>
 </section>
 <section class="cta inverted">
-    <h3 class="xxl we-m">Kom i gang med flyttingen</h3>
-    <div class="btns">
-        <a href="/flyttekalkulator"><button class="btn-inverted">Flyttekalkulator</button></a>
-        <a href="/kontakt-oss"><button class="btn-tertiary">Kontakt</button></a>
+    <div class="faq-container">
+        <h3 class="xxl we-m">Kom i gang med flyttingen</h3>
+        <div class="btns">
+            <a href="/flyttekalkulator"><button class="btn-inverted">Flyttekalkulator</button></a>
+            <a href="/kontakt-oss"><button class="btn-tertiary">Kontakt</button></a>
+        </div>
     </div>
+    
 </section>
 
 
@@ -275,6 +281,7 @@
         justify-content: center;
         align-items: center;
         border-top: 1px solid var(--border-light);
+        max-width: 1000px;
     }
 
     .info-container .item {
@@ -398,13 +405,21 @@
     .cta {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        padding: var(--gap-medium) 20px;
+        align-items: center;
+        background: var(--secondary-color);
+        color: var(--primary-color);
+    }
+
+    .cta-container {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid var(--border-light);
         align-items: center;
         text-align: center;
-        background: var(--secondary-color);
-        border-top: 1px solid var(--border-light);
-        color: var(--primary-color);
+        padding: var(--gap-medium) 20px;
+        gap: 20px;
+        width: 100%;
+        max-width: 1000px;
     }
 
     .cta.inverted {
@@ -468,7 +483,7 @@
             letter-spacing: var(--spacing-xxxl);
         }
 
-        .cta {
+        .cta-container {
             padding: var(--gap-large) 20px;
             gap: 24px;
         }
@@ -497,10 +512,6 @@
             flex-wrap: nowrap;
             display: flex;
             max-width: 400px;
-        }
-
-        .faq-btns>a {
-            width: 50%;
         }
     }
 
