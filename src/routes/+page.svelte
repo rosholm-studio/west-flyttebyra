@@ -407,12 +407,12 @@
 
     .img-divider {
         background: var(--secondary-color);
-        max-height: 500px;
     }
 
     .img-divider img {
         object-fit: cover;
         object-position: center;
+        max-height: 500px;
         width: 100%;
     }
 
