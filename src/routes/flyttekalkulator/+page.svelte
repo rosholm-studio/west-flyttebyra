@@ -95,15 +95,10 @@
     }
 
     @media screen and (min-width: 400px) {
-
         .header {
             align-items: center;
             text-align: center;
             gap: var(--gap-small);
-        }
-
-        .help button.fw {
-            width: fit-content;
         }
     }
 

@@ -143,7 +143,7 @@
     </div>
 </section>
 <section class="cta inverted">
-    <div class="faq-container">
+    <div class="cta-container">
         <h3 class="xxl we-m">Kom i gang med flyttingen</h3>
         <div class="btns">
             <a href="/flyttekalkulator"><button class="btn-inverted">Flyttekalkulator</button></a>
