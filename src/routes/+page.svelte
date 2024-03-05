@@ -50,7 +50,7 @@
 </section>
 <section class="content">
     <div class="content-text">
-        <h2 class="xl">West flyttebyrå er ditt flyttebyrå i Oslo</h2>
+        <h2 class="xl we-m">West flyttebyrå er ditt flyttebyrå i Oslo</h2>
         <p class="m">Vi er et flyttebyrå i Oslo med lang erfaring og en rekke fornøyde kunder. Helt siden starten har vårt hovedmål vært å behandle flyttegods med omtanke og forsiktighet. Samtidig som at vi sørger for en rask og smidig gjennomføring av flytteoppdraget.</p>
     </div>
     <div class="content-info">
@@ -83,17 +83,17 @@
     <div class="info-container">
         <div class="item">
             <img src="/clock.svg" alt="Moving clock">
-            <h4 class="xl">Punktlig og effektiv</h4>
+            <h4 class="xl we-m">Punktlig og effektiv</h4>
             <p class="ml op-m">Vi respekterer tiden din</p>
         </div>
         <div class="item">
             <img src="/card.svg" alt="Credit card">
-            <h4 class="xl">Økonomisk</h4>
+            <h4 class="xl we-m">Økonomisk</h4>
             <p class="ml op-m">Markedets beste priser på din flyttejobb</p>
         </div>
         <div class="item">
             <img src="/sticker.svg" alt="Checkmark">
-            <h4 class="xl">30 års erfaring</h4>
+            <h4 class="xl we-m">30 års erfaring</h4>
             <p class="ml op-m">Flyttebyrå med lang og bred erfaring</p>
         </div>
     </div>
@@ -121,7 +121,7 @@
 </section>
 <section class="cta">
     <div class="rabatt btn-inverted btn-small">10% rabatt idag 🎉</div>
-    <h2>Få et tilbud på din flytting idag</h2>
+    <h2 class="we-m l">Få et tilbud på din flytting idag</h2>
     <div class="btns">
         <a href="/flyttekalkulator"><button>Flyttekalkulator</button></a>
         <a href="/kontakt-oss"><button class="btn-inverted">Kontakt</button></a>
@@ -202,6 +202,7 @@
         gap: 40px;
         justify-content: center;
         align-items: center;
+        color: var(--primary-color);
     }
 
     .content-text {
@@ -398,12 +399,19 @@
         text-align: center;
         background: var(--secondary-color);
         border-top: 1px solid var(--border-light);
+        color: var(--primary-color);
     }
 
     .cta.inverted {
         background: var(--primary-color);
         color: var(--primary-text);
     }
+
+    .cta.inverted .btns {
+        display: flex;
+        justify-content: center;
+    }
+
 
     .img-divider {
         background: var(--secondary-color);
@@ -460,8 +468,18 @@
             gap: 24px;
         }
 
+        .cta h2 {
+            font-size: var(--text-xxl);
+            letter-spacing: var(--spacing-xxl);
+        }
+
         .faq-header {
             gap: 24px;
+        }
+
+        .faq-header h2 {
+            font-size: var(--text-xxxl);
+            letter-spacing: var(--spacing-xxxl);
         }
     }
 
