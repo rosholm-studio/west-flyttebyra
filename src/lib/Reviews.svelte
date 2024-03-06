@@ -38,9 +38,8 @@
             }
         }
         console.log('fetching from API')
-        const proxyEndpoint = '/maps-api';
-        const googleApiUrl = `/maps/api/place/details/json?place_id=${placeId}&fields=reviews&reviews_no_translations=true&key=${apiKey}`;
-        const response = await fetch(`${proxyEndpoint}${googleApiUrl}`);
+        const googleApiUrl = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&reviews_no_translations=true&key=${apiKey}`;
+        const response = await fetch(`${googleApiUrl}`);
         if (response.ok) {
             const data = await response.json();
             reviews = data.result.reviews; 
@@ -72,7 +71,7 @@
     }
 
     function imageSrc(path) {
-        return `/maps-image/${path.replace('https://lh3.googleusercontent.com/', '')}`;
+        return `${path}`;
     }
 
 </script>
