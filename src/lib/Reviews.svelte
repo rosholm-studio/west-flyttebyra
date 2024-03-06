@@ -10,6 +10,7 @@
     let comments = [];
     let isExpandable = [];
     let expanded = [];
+    let cells = [];
 
     $: if (comments.length>0) {
         isExpandable = new Array(comments.length).fill(false);
@@ -37,16 +38,18 @@
             }
         }
         console.log('fetching from API')
-        const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&reviews_no_translations=true&key=${apiKey}`);
+        const proxyEndpoint = '/maps-api';
+        const googleApiUrl = `/maps/api/place/details/json?place_id=${placeId}&fields=reviews&reviews_no_translations=true&key=${apiKey}`;
+        const response = await fetch(`${proxyEndpoint}${googleApiUrl}`);
         if (response.ok) {
             const data = await response.json();
-            reviews = data.result.reviews;
-            console.log(data);  
+            reviews = data.result.reviews; 
             localStorage.setItem('reviews', JSON.stringify(reviews));
             localStorage.setItem('reviewsTimestamp', now.toISOString());
         } else {
             console.error('Failed to fetch reviews');
         }
+        
     });
 
     const options = {
@@ -56,41 +59,58 @@
         selectedAttraction: 0.2,
         friction: 0.7
     };
-    
+
+    function adaptHeight() {
+        let vp = document.querySelector('.flickity-viewport');
+        let max = 0;
+        setTimeout(() => {
+            cells.forEach(item => {
+            if (max<item.clientHeight) max = item.clientHeight; 
+            })
+            vp.style.height = `${max}px`;
+        }, 25);
+    }
+
+    function imageSrc(path) {
+        return `/maps-image/${path.replace('https://lh3.googleusercontent.com/', '')}`;
+    }
+
 </script>
 
 <div class="container">
-    <Carousel {options}>
-        {#each reviews.slice(0, reviewCount) as review, i (review.author_name)}
-            <div class="item carousel-cell">
-                <div class="profile">
-                    <img src="{review.profile_photo_url}" alt="{review.author_name}'s profile picture">
-                    <div class="info">
-                        <a href="{review.author_url}" target="_blank" class="s we-m">{review.author_name}</a>
-                        <p class="s we-r">{review.relative_time_description}</p>
+    {#if reviews.length>0} 
+        <Carousel {options}>
+            {#each reviews as review, i (review.author_name)}
+                <div bind:this={cells[i]} class="item carousel-cell">
+                    <div class="profile">
+                        <img src="{imageSrc(review.profile_photo_url)}" alt="{review.author_name}'s profile picture">
+                        <div class="info">
+                            <a href="{review.author_url}" target="_blank" class="s we-m">{review.author_name}</a>
+                            <p class="s we-r">{review.relative_time_description}</p>
+                        </div>
                     </div>
+                    
+                    <div class="stars">
+                        {#each Array(review.rating) as _}
+                            <img src="/star.svg" alt="Full star">
+                        {/each}
+                        {#each Array(5-review.rating) as _}
+                            <img class="op-m" src="/star.svg" alt="Empty star">
+                        {/each}
+                    </div>
+                    <p bind:this="{comments[i]}" class:cut={!expanded[i]} class="comment m we-r">{review.text}</p>
+                    <div class="btns">
+                        <button on:click|preventDefault="{() => {expanded[i] = !expanded[i]; adaptHeight()}}" class:hide="{isExpandable[i]}" class="btn-unset op-h s">
+                            {#if !expanded[i]}Show more{/if}
+                            {#if expanded[i]}Show less{/if}
+                        </button>
+                        <a href="https://www.google.com/maps/place/West+Flyttebyrå+AS" target="_blank"><img src="/icons/google.svg" alt="Google"></a>
+                    </div>
+                    
                 </div>
-                
-                <div class="stars">
-                    {#each Array(review.rating) as _}
-                        <img src="/star.svg" alt="Full star">
-                    {/each}
-                    {#each Array(5-review.rating) as _}
-                        <img class="op-m" src="/star.svg" alt="Empty star">
-                    {/each}
-                </div>
-                <p bind:this="{comments[i]}" class:cut={!expanded[i]} class="comment m we-r">{review.text}</p>
-                <div class="btns">
-                    <button on:click|preventDefault="{() => expanded[i] = !expanded[i]}" class:hide="{isExpandable[i]}" class="btn-unset op-h s">
-                        {#if !expanded[i]}Show more{/if}
-                        {#if expanded[i]}Show less{/if}
-                    </button>
-                    <a href="https://www.google.com/maps/place/West+Flyttebyrå+AS" target="_blank"><img src="/icons/google.svg" alt="Google"></a>
-                </div>
-                
-            </div>
-        {/each}
-    </Carousel>
+            {/each}
+        </Carousel>
+    {/if}
 </div>
 
 <style>
@@ -116,8 +136,8 @@
         border-radius: 20px;
         width: 100%;
         max-width: 360px;
-        height: 360px;
-        max-height: 1000px;
+        min-height: 360px;
+        height: fit-content;
     }
 
     .profile {

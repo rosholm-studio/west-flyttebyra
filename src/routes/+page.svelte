@@ -1,5 +1,4 @@
 <script>
-    import Carousel from "../lib/Carousel.svelte";
     import Faq from "../lib/Faq.svelte";
     import Reviews from "../lib/Reviews.svelte";
     import Slider from "../lib/Slider.svelte";
