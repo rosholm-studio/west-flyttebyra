@@ -25,7 +25,7 @@
 
 <section class="hero">
     <div class="hero-text">
-        <h1 class="xxl we-m">Få ditt personlige tilbud {#if result>0}på <u>{result} m³</u>{/if}</h1>
+        <h1 class="xxl we-b">Få ditt personlige tilbud {#if result>0}på <u>{result} m³</u>{/if}</h1>
         <p class="m">Vi kan benytte flyttekalkulator som utgangspunkt i en fastpris, men det er da viktig at du har fått med deg alt du skal flytte på oversikten.</p>
         <div class="rabatt btn-inverted btn-small">10% rabatt idag 🎉</div>
     </div>
@@ -114,17 +114,17 @@
     <div class="info-container">
         <div class="item">
             <img src="/clock.svg" alt="Moving clock">
-            <h4 class="xl">Punktlig og effektiv</h4>
+            <h4 class="xl we-m">Punktlig og effektiv</h4>
             <p class="ml op-m">Vi respekterer tiden din</p>
         </div>
         <div class="item">
             <img src="/card.svg" alt="Credit card">
-            <h4 class="xl">Økonomisk</h4>
+            <h4 class="xl we-m">Økonomisk</h4>
             <p class="ml op-m">Markedets beste priser på din flyttejobb</p>
         </div>
         <div class="item">
             <img src="/sticker.svg" alt="Checkmark">
-            <h4 class="xl">30 års erfaring</h4>
+            <h4 class="xl we-m">30 års erfaring</h4>
             <p class="ml op-m">Flyttebyrå med lang og bred erfaring</p>
         </div>
     </div>

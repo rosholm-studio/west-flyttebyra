@@ -1,5 +1,5 @@
 <section class="hero">
-    <h1 class="xxl we-m">Om West Flyttebyrå</h1>
+    <h1 class="xxl we-b">Om West Flyttebyrå</h1>
     <p class="ml">West Flyttebyrå har en stolt historie som strekker seg over 30 år. Med en solid erfaring innen flytting har vi etablert oss som en pålitelig aktør i bransjen, og vi fortsetter å sette standarden for kvalitetstjenester.</p>
     <img src="/guy.png" alt="">
 </section>

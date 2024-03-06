@@ -22,7 +22,6 @@
                 <a class="m" href="/flyttekalkulator">Kalkulator</a>
                 <a class="m" href="/kontakt-oss">Kontakt oss</a>
                 <a class="m" href="/om-oss">Om oss</a>
-                <a class="m" href="/vilkar">Vilkår</a>
                 <a class="m" href="/personvern">Personvern</a>
             </div>
             <div class="item">

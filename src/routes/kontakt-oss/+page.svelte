@@ -4,7 +4,7 @@
 
 <section class="hero">
     <div class="hero-text">
-        <h1 class="xxl we-m">Kontakt oss</h1>
+        <h1 class="xxl we-b">Kontakt oss</h1>
         <p>Trenger du hjelp eller har spørsmål angående din kommende flytting? Vår dedikerte kundeservice er her for å hjelpe deg. Kontakt oss i dag for å få mer informasjon.</p>
     </div>
     <div class="hero-content">

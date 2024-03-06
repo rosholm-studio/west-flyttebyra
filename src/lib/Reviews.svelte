@@ -56,7 +56,8 @@
         prevNextButtons: false,
         dragThreshold: 10,
         selectedAttraction: 0.2,
-        friction: 0.7
+        friction: 0.7,
+        initialIndex: 2
     };
 
     function adaptHeight() {

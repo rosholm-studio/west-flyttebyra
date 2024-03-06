@@ -37,7 +37,7 @@
 <section class="landing">
     <div class="landing-content">
         <div class="rabatt btn-small btn-inverted">10% rabatt idag 🎉</div>
-        <h1 class="we-m">Vi gjør det <div class="op-m">enkelt</div> og <div class="op-m">rimelig</div> for deg å flytte i Oslo-området</h1>
+        <h1 class="we-b">Vi gjør det <div class="op-m">enkelt</div> og <div class="op-m">rimelig</div> for deg å flytte i Oslo-området</h1>
         <div class="landing-btn">
             <a href="/flyttekalkulator"><button>Flyttekalkulator</button></a>
             <p class="s op-h">La oss finne den beste prisen til deg</p>
@@ -121,7 +121,7 @@
 <section class="cta">
     <div class="cta-container">
         <div class="rabatt btn-inverted btn-small">10% rabatt idag 🎉</div>
-        <h2 class="we-m l">Få et tilbud på din flytting idag</h2>
+        <h2 class="we-m xl">Få et tilbud på din flytting idag</h2>
         <div class="btns">
             <a href="/flyttekalkulator"><button>Flyttekalkulator</button></a>
             <a href="/kontakt-oss"><button class="btn-inverted">Kontakt</button></a>
@@ -143,7 +143,7 @@
 </section>
 <section class="cta inverted">
     <div class="cta-container">
-        <h3 class="xxl we-m">Kom i gang med flyttingen</h3>
+        <h3 class="xl we-m">Kom i gang med flyttingen</h3>
         <div class="btns">
             <a href="/flyttekalkulator"><button class="btn-inverted">Flyttekalkulator</button></a>
             <a href="/kontakt-oss"><button class="btn-tertiary">Kontakt</button></a>
@@ -412,7 +412,6 @@
     .cta-container {
         display: flex;
         flex-direction: column;
-        border-top: 1px solid var(--border-light);
         align-items: center;
         text-align: center;
         padding: var(--gap-medium) 20px;
