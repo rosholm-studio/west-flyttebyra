@@ -21,7 +21,6 @@
     {/each}
 </div>
 
-
 <style>
     .container {
         max-width: 1000px;

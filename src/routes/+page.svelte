@@ -207,7 +207,7 @@
         flex-direction: column;
         gap: 40px;
         justify-content: center;
-        align-items: center;
+        align-items: start;
         color: var(--primary-color);
     }
 
@@ -475,7 +475,6 @@
             padding: var(--gap-large) 24px;
             gap: var(--gap-large);
             flex-direction: row;
-            align-items: start;
         }
 
         .content h2 {
