@@ -80,12 +80,14 @@
 
     .container .links {
         display: none;
-        gap: 100px;
+        gap: 60px;
     }
 
     .container .links a {
         color: var(--primary-color);
         padding: 12px 20px;
+        user-select: none;
+        -webkit-user-drag: none;
     }
 
     .container .btns button:first-child {
