@@ -102,5 +102,9 @@
     .item.active .answer {
         display: flex;
     }
+
+    .answer p {
+        max-width: 600px;
+    }
 </style>
 

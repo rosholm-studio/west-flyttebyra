@@ -1,62 +1,185 @@
+<script>
+    import Faq from "../../lib/Faq.svelte";
+
+    let faqArrayOne = [ 
+        null, 
+        {
+            'Erfaring': 'Med tre tiår med erfaring i bransjen bringer vi enestående ekspertise og kunnskap til hvert eneste flytt.',
+            'Kundefokus': 'Vår forpliktelse til kundetilfredshet driver alt vi gjør. Vi prioriterer dine behov og sikrer åpen kommunikasjon gjennom hele flytteprosessen.',
+            'Effektivitet': 'Vi forstår at flytting kan være stressende. Derfor streber vi etter å gjøre prosessen så jevn og effektiv som mulig, og sparer deg for tid og energi.',
+            'Profesjonalitet': 'Vårt team består av opplærte fagpersoner som behandler eiendelene dine med største forsiktighet og respekt. Fra pakking til transport sikrer vi en profesjonell tilnærming på hvert trinn.'
+        }
+    ]
+</script>
+
 <section class="hero">
-    <h1 class="xxl we-b">Om West Flyttebyrå</h1>
-    <p class="ml">West Flyttebyrå har en stolt historie som strekker seg over 30 år. Med en solid erfaring innen flytting har vi etablert oss som en pålitelig aktør i bransjen, og vi fortsetter å sette standarden for kvalitetstjenester.</p>
-    <img src="/guy.png" alt="">
+    <div class="hero-header">
+        <h1 class="we-b xxl">Flyttebyrå i Oslo med 30 års erfaring</h1>
+        <p>Med over 30 års erfaring har vi etablert oss som et ledende flyttebyrå i Oslo, dedikert til å tilby effektive, pålitelige og rimelige flyttetjenester skreddersydd for å møte dine behov.</p>
+    </div>
+    <div class="hero-content">
+        <img src="/placeholder_about.png" alt="Unloaded truck">
+        <div class="hero-text">
+            <h2 class="we-m xxxl">Vår Forpliktelse</h2>
+            <p>Siden oppstarten har vi prioritert å håndtere eiendelene dine med forsiktighet og presisjon samtidig som vi sikrer en sømløs overgang til din nye destinasjon. Pakking og flytting er kjerneområdene for vår ekspertise, og vi har utvidet tjenestene våre for å inkludere lagring og rengjøring, rettet mot både private og kommersielle kunder.</p>
+            <div class="btns">
+                <a href="/flyttekalkulator"><button>Flyttekalkulator</button></a>
+                <a href="/kontakt-oss"><button class="btn-inverted">Kontakt</button></a>
+            </div>
+        </div>
+    </div>
 </section>
-<section class="about">
-    <div class="item">
-        <h2 class="xl">Vår misjon: omsorgsfull behandling og smidig flytting</h2>
-        <p class="ml">
-            Pakking og flytting er våre kjerneområder, og gjennom årene har vi finpusset våre ferdigheter for å sikre at dine eiendeler håndteres med optimal presisjon og omhu. Vårt erfarne team er grundig opplært i de nyeste teknikkene og metodene for effektiv pakking og forsiktig transport av dine verdifulle eiendeler.
-        </p>
+<section class="faq">
+    <div class="faq-text">
+        <h2 style="color: {faqArrayOne[0]}" class="we-m">Hvorfor velge West Flyttebyrå?</h2>
+        <p class="m">Alt arbeidet du selv synes er vanskelig og krevende utfører vi. Enten du bare ønsker flytting, eller hjelp med hele prosessen.</p>
     </div>
-    <div class="item">
-        <h2 class="xl">Ekspertise og fokus: pakking og flytting</h2>
-        <p class="ml">
-            Vi tilbyr mer enn bare flytting - vi tilbyr en helhetlig løsning for dine behov. I tillegg til vår omfattende flyttetjeneste, tilbyr vi også trygg lagring og grundig renhold. Enten du trenger midlertidig lagring mens du flytter eller profesjonelt renhold etter at flyttingen er fullført, kan du stole på at vi tar vare på alle aspekter av din flytteprosess.
-        </p>
+    <Faq faqArray={faqArrayOne} />
+    <div class="faq-bottom">
+        <h4 class="we-m l">Skal du flytte i oslo-området?</h4>
+        <div class="faq-btns">
+            <a href="/flyttekalkulator"><button class="btn-inverted">Flyttekalkulator</button></a>
+            <a href="/kontakt-oss"><button class="btn-tertiary">Kontakt</button></a>
+        </div>
     </div>
-    <div class="item">
-        <h2 class="xl">Helhetlige tjenester: lagring og renhold</h2>
-        <p class="ml">
-            Fra den dagen vi åpnet våre dører, har vårt fremste mål vært å behandle ditt flyttegods med den omsorg og forsiktighet det fortjener, samtidig som vi sikrer en sømløs gjennomføring av hvert oppdrag. Vi forstår viktigheten av å ta vare på dine eiendeler, og vårt dedikerte team streber alltid etter å levere tjenester av høyeste kvalitet.
-        </p>
-    </div>
-    <div class="item">
-        <h2 class="xl">Lokasjon og åpningstider</h2>
-        <p class="ml">
-            Vårt hovedkontor er strategisk plassert i Oslo for å betjene deg best mulig. Du er velkommen til å besøke oss på kontoret i hverdager mellom 08:00 og 16:00. Etter kl. 16:00 er vi tilgjengelige på telefon for å svare på dine spørsmål og håndtere eventuelle henvendelser. Vi er her for å gjøre din flytteopplevelse så enkel og stressfri som mulig.
-        </p>
-    </div>
-    
+</section>
+<section class="img-divider">
+    <img src="/placeholder_about2.png" alt="Home with furniture">
 </section>
 
 <style>
+
     .hero {
-        padding: 36px 24px;
-        color: var(--primary-text);
+        background: var(--secondary-color);
         display: flex;
         flex-direction: column;
-        gap: 24px;
-    }
-
-    img {
-        border-radius: 20px;
-        margin-top: 24px;
-    }
-
-    .about {
-        padding: 80px 24px;
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
+        align-items: center;
         color: var(--primary-color);
-        background: var(--background);
     }
 
-    .item {
+    .hero-header {
+        align-items: center;
+        text-align: center;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        padding: var(--gap-small) 20px;
+        max-width: 550px;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        padding: var(--gap-small) 24px var(--gap-medium) 24px;
+        gap: var(--gap-medium);
+        max-width: 1000px;
+        align-items: center;
+    }
+
+    .hero-content img {
+        height: 100%;
+        max-height: 470px;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+    }
+
+    .hero-text {
         display: flex;
         flex-direction: column;
         gap: 24px;
+        width: 100%
+    }
+
+    .btns {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .faq {
+        padding: var(--gap-medium) 20px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-small);
+        color: var(--primary-text);
+        align-items: center;
+    }
+
+    .faq-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 460px;
+        text-align: center;
+        color: var(--secondary-color);
+    }
+
+    .faq-text h2 {
+        font-size: var(--text-xl);
+        letter-spacing: var(--spacing-xl);
+    }
+
+    .faq-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .faq-btns {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .img-divider {
+        background: var(--secondary-color);
+    }
+
+    .img-divider img {
+        object-fit: cover;
+        object-position: center;
+        max-height: 500px;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 705px) {
+        .hero-header {
+            padding: var(--gap-large) 24px;
+            gap: var(--gap-small);
+        }
+
+        .hero-header h1 {
+            font-size: var(--text-display);
+            letter-spacing: var(--spacing-display);
+        }
+
+        .hero-content {
+            flex-direction: row-reverse;
+            padding: var(--gap-small) 48px var(--gap-large) 48px;
+        }
+
+        .faq {
+            padding: var(--gap-large) 24px;
+            gap: var(--gap-medium);
+        }
+
+        .faq-text h2 {
+            font-size: var(--text-xxxl);
+            letter-spacing: var(--spacing-xxxl);
+        }
+
+        .faq-bottom h4 {
+            font-size: var(--text-xl);
+            letter-spacing: var(--spacing-xl);
+        }
+
     }
 </style>

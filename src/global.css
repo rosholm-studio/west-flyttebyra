@@ -65,7 +65,7 @@
 @font-face {
     font-family: 'Inter';
     src: url('/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 400 500 600;
     font-display: swap;
 }
 
@@ -166,6 +166,12 @@ button img {
 .fw {
     width: 100%;
 }
+
+.xxxl {
+    font-size: var(--text-xxxl);
+    letter-spacing: var(--spacing-xxxl);
+}
+
 
 .xxl {
     font-size: var(--text-xxl);
