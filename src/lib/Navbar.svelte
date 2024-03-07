@@ -84,7 +84,8 @@
     }
 
     .container .links a {
-        color: var(--primary-color)
+        color: var(--primary-color);
+        padding: 12px 20px;
     }
 
     .container .btns button:first-child {
