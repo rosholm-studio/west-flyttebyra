@@ -130,7 +130,7 @@
             </div>
         </div>
         <div></div>
-        <h2 class="s we-m">Hvor flytter du til?</h2>
+        <h2 class="m we-m">Hvor flytter du til?</h2>
         <div class="divider fw"></div>
         <div class="form-item">
             <label for="til-adresse">Adresse*</label>
@@ -156,7 +156,7 @@
             </div>
         </div>
         <div></div>
-        <h2 class="s we-m">Informasjon om deg</h2>
+        <h2 class="m we-m">Informasjon om deg</h2>
         <div class="divider fw"></div>
         <div class="form-item">
             <label for="name">Navn*</label>
