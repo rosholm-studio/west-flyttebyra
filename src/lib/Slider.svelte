@@ -15,6 +15,8 @@
 
 <style>
     .logo-slider {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         position: relative;    
         padding: 20px 0;
@@ -24,15 +26,16 @@
     }
 
     .logo-slider div {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 7px;
-        animation: 30s slide infinite linear;
+        -webkit-animation: 30s slide infinite linear;
+                animation: 30s slide infinite linear;
     }
 
     .logo-slider::before, .logo-slider::after {
         content: '';
-
-
         position: absolute;
         z-index: 3;
         width: 80px;
@@ -43,11 +46,15 @@
 
     .logo-slider::before {
         left: -2px;
+        background: -webkit-gradient(linear, left top, right top, from(rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+        background: -o-linear-gradient(left, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
         background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
     }
 
     .logo-slider::after {
         right: -2px;
+        background: -webkit-gradient(linear, right top, left top, from(rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+        background: -o-linear-gradient(right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
         background: linear-gradient(270deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
     }
 
@@ -59,12 +66,23 @@
         height: 33px;
     }
 
+    @-webkit-keyframes slide {
+        0% {
+            
+        }
+        100% {
+            -webkit-transform: translateX(calc(-50% - 3.5px));
+                    transform: translateX(calc(-50% - 3.5px));
+        }
+    }
+
     @keyframes slide {
         0% {
             
         }
         100% {
-            transform: translateX(calc(-50% - 3.5px));
+            -webkit-transform: translateX(calc(-50% - 3.5px));
+                    transform: translateX(calc(-50% - 3.5px));
         }
     }
 </style>

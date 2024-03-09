@@ -118,11 +118,16 @@
 
 <style>
 
-    .container {
+.container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 16px;
-        flex-wrap: wrap;
-        justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         position: relative;
         width: 100%;
     }
@@ -131,7 +136,12 @@
         padding: 24px;
         background: var(--background);
         color: var(--primary-color);
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 20px;
         margin-right: 50px;
@@ -140,13 +150,19 @@
         width: 100%;
         max-width: 360px;
         min-height: 360px;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
 
     .profile {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 12px;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .profile img {
@@ -155,8 +171,13 @@
     }
 
     .info {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 2px;
     }
 
@@ -165,13 +186,20 @@
         -webkit-line-clamp: 6;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis;
     }
 
     .btns {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
-        align-items: end;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: end;
         margin-top: auto;
     }
 
@@ -189,6 +217,8 @@
     }
 
     .stars {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: 0;
     }

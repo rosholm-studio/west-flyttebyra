@@ -28,9 +28,11 @@
 
     let inFraAdresse = '';
     let inFraPostnummer = '';
+    let inFraPoststed = '';
     let inFraEtasje = '';
     let inTilAdresse = '';
     let inTilPostnummer = '';
+    let inTilPoststed = '';
     let inTilEtasje = '';
     let inNavn = '';
     let inEpost = '';
@@ -52,6 +54,7 @@
         formFilled = 
             (inFraAdresse.length>5 && inTilAdresse.length>5) &&
             (inFraPostnummer && inFraPostnummer.toString().length>2 && inTilPostnummer && inTilPostnummer.toString().length>2) &&
+            (inFraPoststed.length>1 && inTilPoststed.length>1) &&
             (inFraEtasje && inFraEtasje.toString.length>0 && inTilEtasje && inTilEtasje.toString.length>0) &&
             (inNavn.length>3) && 
             (inEpost.length>3 && inEpost.includes('@') && inEpost.includes('.')) &&
@@ -63,14 +66,16 @@
         if (!formFilled) return;
         sending = true;
         formBtn.textContent = "Sender..."
-        emailjs.send("rosholm_forms","tilbud",{
+        emailjs.send("service_3yktczh","tilbud",{
             kalkulator: result,
             fraAdresse: inFraAdresse,
             fraPostnummer: inFraPostnummer,
+            fraPoststed: inFraPoststed,
             fraEtasje: inFraEtasje,
             fraHeis: fraHeis === true ? 'Ja' : 'Nei',
             tilAdresse: inTilAdresse,
             tilPostnummer: inTilPostnummer,
+            tilPoststed: inTilPoststed,
             tilEtasje: inTilEtasje,
             tilHeis: tilHeis === true ? 'Ja' : 'Nei',
             navn: inNavn,
@@ -110,6 +115,10 @@
             <input bind:value="{inFraPostnummer}" type="number" id="fra-postnummer" placeholder="0265">
         </div>
         <div class="form-item">
+            <label for="fra-poststed">Poststed*</label>
+            <input bind:value="{inFraPoststed}" type="text" id="fra-poststed" placeholder="Oslo">
+        </div>
+        <div class="form-item">
             <label for="fra-etasje">Etasje*</label>
             <input bind:value="{inFraEtasje}" type="number" id="fra-etasje" placeholder="3">
         </div>
@@ -130,6 +139,10 @@
         <div class="form-item">
             <label for="til-postnummer">Postnummer*</label>
             <input bind:value="{inTilPostnummer}" type="number" id="til-postnummer" placeholder="0265">
+        </div>
+        <div class="form-item">
+            <label for="til-poststed">Poststed*</label>
+            <input bind:value="{inTilPoststed}" type="text" id="til-poststed" placeholder="Oslo">
         </div>
         <div class="form-item">
             <label for="til-etasje">Etasje*</label>
@@ -204,29 +217,44 @@
 
     .img-divider img {
         width: 100%;
-        object-fit: cover;
-        object-position: center;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
         max-height: 500px;
     }
 
     h1 u {
         text-underline-offset: 8px;
-        text-decoration: 3px underline;
+        -webkit-text-decoration: 3px underline;
+                text-decoration: 3px underline;
     }
 
     .hero {
         background: var(--secondary-color);
         color: var(--primary-color);
         padding: 60px 24px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: var(--gap-small);
     }
 
     .hero-text {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 20px;
         max-width: 550px;
     }
@@ -234,16 +262,27 @@
     form {
         width: 100%;
         max-width: 480px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 20px;
     }
 
     .checkbox input {
         width: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         text-align: center;
     } 
 
@@ -254,16 +293,28 @@
     .reviews {
         padding: 40px 16px;
         background: var(--secondary-color);
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 45px;
         color: var(--primary-color);
     }
 
     .reviews-text {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         text-align: center;
         gap: 20px;
     }
@@ -280,36 +331,66 @@
 
     .faq {
         padding: var(--gap-medium) 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 40px;
         color: var(--primary-text);
     }
 
     .info {
         background: var(--secondary-color);
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 40px;
         padding: 60px 24px 40px 24px;
     }
 
     .info-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         width: 100%;
         max-width: 1030px;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         border-top: 1px solid var(--border-light);
     }
 
     .info-container .item {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 20px;
         padding: 20px;
         width: 100%;
@@ -335,7 +416,9 @@
         }
 
         .hero-text {
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             text-align: center;
             gap: var(--gap-small);
         }
@@ -348,7 +431,10 @@
 
     @media screen and (min-width: 1000px) {
         .info-container {
-            flex-direction: row;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
         }
     }
 
@@ -361,7 +447,9 @@
 
     @media screen and (min-width: 550px) {
         .faq {
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
         }
     }
 </style>

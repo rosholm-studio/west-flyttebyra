@@ -31,7 +31,7 @@
         if (!formFilled) return;
         sending = true;
         formBtn.textContent = "Sender..."
-        emailjs.send("rosholm_forms","kontakt-oss",{
+        emailjs.send("service_3yktczh","kontakt-oss",{
             navn: inNavn,
             epost: inEpost,
             prefix: inPrefix,
@@ -111,16 +111,28 @@
 <style>
     .hero {
         padding: var(--gap-small) 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: var(--gap-medium);
         background: var(--secondary-color);
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .hero-text {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 20px;
         text-align: center;
         max-width: 550px;
@@ -128,18 +140,32 @@
     }
 
     .hero-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 22px;
         width: 100%;
         max-width: 1000px;
     }
 
     .hero-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 20px;
         padding: 20px;
         background: var(--background);
@@ -151,20 +177,34 @@
     }
 
     .form {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         padding: var(--gap-medium) 20px;
         gap: var(--gap-small);
         background: var(--secondary-color);
-        align-items: center;
-        flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .form-text {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 24px;
         text-align: center;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         color: var(--primary-color);
         max-width: 450px;
     }
@@ -172,8 +212,13 @@
     form {
         width: 100%;
         max-width: 480px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 20px;
     }
 
@@ -187,8 +232,10 @@
 
     .img-divider img {
         width: 100%;
-        object-fit: cover;
-        object-position: center;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
         max-height: 500px;
     }
 
@@ -207,13 +254,14 @@
         }
 
         .hero-content {
-            flex-direction: row;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
         }
 
         .hero-item {
             max-width: unset;
         }
-
-
     }
 </style>

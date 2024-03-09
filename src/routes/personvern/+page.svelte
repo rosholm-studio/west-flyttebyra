@@ -53,12 +53,19 @@
 <style>
     section {
         padding: var(--gap-small) 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: var(--gap-medium);
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         background: var(--secondary-color);
         color: var(--primary-color);
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     h1 {
@@ -69,8 +76,13 @@
     
     .text {
         max-width: 800px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     @media screen and (min-width: 800px) {

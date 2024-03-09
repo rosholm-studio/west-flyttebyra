@@ -33,8 +33,13 @@
     
     .item {
         border-bottom: 1px solid var(--inverted-border-light);
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         color: var(--primary-text);
     }
 
@@ -45,19 +50,31 @@
     .question {
         position: relative;
         padding: 24px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 100%;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         text-align: start;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 20px;
     }
 
     .plusminus {
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         min-height: 19px;
         min-width: 19px;
     }
@@ -66,7 +83,9 @@
         position: absolute;
         content: '';
         background: var(--primary-text);
-        transition-duration: 100ms;
+        -webkit-transition-duration: 100ms;
+             -o-transition-duration: 100ms;
+                transition-duration: 100ms;
     }
 
     .container.inverted .plusminus::before, .container.inverted .plusminus::after {
@@ -86,7 +105,9 @@
     }
 
     .item.active .plusminus::after {
-        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg);
     }
 
     .question h3 {
@@ -100,6 +121,8 @@
     }
 
     .item.active .answer {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
