@@ -63,10 +63,24 @@
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: url('/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
-    font-weight: 400 500 600;
-    font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/static/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/static/Inter-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/static/Inter-SemiBold.ttf') format('truetype');
 }
 
 body, html {
@@ -102,6 +116,7 @@ input {
 }
 
 button {
+    cursor: pointer;
     background: var(--primary-color);
     color: var(--primary-text);
     padding: 12px 20px;
@@ -112,6 +127,7 @@ button {
     outline: none;
     font-size: 16px;
     touch-action: manipulation;
+    transition-duration: 100ms;
 }
 
 button img {
@@ -161,6 +177,16 @@ button img {
     background: unset;
     border: unset;
     outline: unset;
+}
+
+button:disabled {
+    opacity: .2;
+    cursor: not-allowed;
+    transition-duration: 100ms;
+}
+
+a {
+    cursor: pointer;
 }
 
 .fw {
@@ -238,18 +264,19 @@ form {
 form button {
     width: 100%;
     height: 50px;
+    touch-action: manipulation;
 }
 
 form .checkbox input {
     background: var(--background);
     color: rgb(0, 0, 0, .3);
+    touch-action: manipulation;
 }
 
 form .checkbox input.active {
     outline-width: 2px;
     color: var(--inverted-text);
 }
-
 
 .form-item {
     display: flex;
@@ -272,10 +299,20 @@ form .checkbox input.active {
     width: 62px;
 }
 
-.form-item input {    
-    width: 100%;
+input, textarea {
+    touch-action: manipulation;
     outline: 1px solid var(--border-medium);
     border-radius: 10px;
+    cursor: text;
+}
+
+input[type="button"] {
+    cursor: pointer;
+    touch-action: unset;
+}
+
+.form-item input {    
+    width: 100%;
     padding: 0 16px;
     height: 50px;
 }
@@ -290,7 +327,6 @@ form .checkbox input.active {
 .form-item textarea {    
     width: 100%;
     outline: 1px solid var(--border-medium);
-    border-radius: 10px;
     padding: 16px;
     height: 100px;
     resize: none;

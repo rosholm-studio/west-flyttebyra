@@ -141,12 +141,12 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        gap: 8px;
     }
 
     .menu a {
         color: var(--primary-text);
         font-weight: var(--weight-medium);
+        padding: 4px 0;
     }
 
     .menu .btns {

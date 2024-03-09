@@ -35,13 +35,6 @@
         <p class="m">Alt arbeidet du selv synes er vanskelig og krevende utfører vi. Enten du bare ønsker flytting, eller hjelp med hele prosessen.</p>
     </div>
     <Faq faqArray={faqArrayOne} />
-    <div class="faq-bottom">
-        <h4 class="we-m l">Skal du flytte i oslo-området?</h4>
-        <div class="faq-btns">
-            <a href="/flyttekalkulator"><button class="btn-inverted">Flyttekalkulator</button></a>
-            <a href="/kontakt-oss"><button class="btn-tertiary">Kontakt</button></a>
-        </div>
-    </div>
 </section>
 <section class="img-divider">
     <img src="/placeholder_about2.png" alt="Home with furniture">
@@ -122,23 +115,6 @@
         letter-spacing: var(--spacing-xl);
     }
 
-    .faq-bottom {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .faq-btns {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        gap: 8px;
-        width: 100%;
-    }
-
     .img-divider {
         background: var(--secondary-color);
     }
@@ -175,11 +151,5 @@
             font-size: var(--text-xxxl);
             letter-spacing: var(--spacing-xxxl);
         }
-
-        .faq-bottom h4 {
-            font-size: var(--text-xl);
-            letter-spacing: var(--spacing-xl);
-        }
-
     }
 </style>

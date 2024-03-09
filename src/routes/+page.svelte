@@ -103,13 +103,6 @@
         <p class="m">Alt arbeidet du selv synes er vanskelig og krevende utfører vi. Enten du bare ønsker flytting, eller hjelp med hele prosessen.</p>
     </div>
     <Faq faqArray={faqArrayOne} />
-    <div class="faq-bottom">
-        <h4 class="we-m l">Skal du flytte i oslo-området?</h4>
-        <div class="faq-btns">
-            <a href="/flyttekalkulator"><button class="btn-inverted">Flyttekalkulator</button></a>
-            <a href="/kontakt-oss"><button class="btn-tertiary">Kontakt</button></a>
-        </div>
-    </div>
 </section>
 <section class="reviews">
     <div class="reviews-text">

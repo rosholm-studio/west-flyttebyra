@@ -1,5 +1,52 @@
 <script>
+    import { browser } from '$app/environment';
+    import emailjs from '@emailjs/browser';
+    import { onMount } from "svelte";
+    import { goto } from '$app/navigation';
 
+    let inNavn = '';
+    let inEpost = '';
+    let inPrefix = "+47";
+    let inMobilnummer = '';
+    let inMelding = '';
+
+    let formBtn;
+    let sending = false;
+    let formFilled = false;
+
+    onMount(() => {
+        emailjs.init({
+            publicKey: import.meta.env.VITE_EJS_PKEY,
+        });
+    })
+
+    $: if (browser ) {
+        formFilled = 
+            (inNavn.length>3) && 
+            (inEpost.length>3 && inEpost.includes('@') && inEpost.includes('.')) &&
+            !sending
+    }
+    
+    function sendEmail() {
+        if (!formFilled) return;
+        sending = true;
+        formBtn.textContent = "Sender..."
+        emailjs.send("svift_forms","kontakt-oss",{
+            navn: inNavn,
+            epost: inEpost,
+            prefix: inPrefix,
+            mobilnummer: inMobilnummer,
+            melding: inMelding
+        }).then(() => {
+            formBtn.textContent = "Suksess!";
+            sending = false;
+            goto('/suksess');
+        }, (error) => {
+            formBtn.textContent = "Error :(";
+            console.error('Svift | ', error);
+            sending = false;
+        });
+    }
 </script>
 
 <section class="hero">
@@ -34,26 +81,26 @@
         <h2 class="m we-m">Kontaktskjema</h2>
         <div class="divider fw"></div>
         <div class="form-item">
-            <label for="name">Navn</label>
-            <input type="text" id="name" placeholder="Ole Gunnarsen">
+            <label for="name">Navn*</label>
+            <input required bind:value="{inNavn}" type="text" id="name" placeholder="Ole Gunnarsen">
         </div>
         <div class="form-item">
-            <label for="mail">E-post</label>
-            <input type="email" id="mail" placeholder="ole@mail.com">
+            <label for="mail">E-post*</label>
+            <input required bind:value="{inEpost}" type="email" id="mail" placeholder="ole@mail.com">
         </div>
         <div class="form-item">
             <label for="number">Mobilnummer</label>
             <div>
-                <input maxlength="4" type="text" value="+47" placeholder="+47">
-                <input type="number" id="number" placeholder="000 00 000">
+                <input bind:value="{inPrefix}" maxlength="4" type="text" placeholder="+47">
+                <input bind:value="{inMobilnummer}" type="number" id="number" placeholder="000 00 000">
             </div>
         </div>
         <div class="form-item">
             <label for="melding">Melding</label>
-            <textarea name="melding" id="melding" placeholder="Skriv din melding her"></textarea>
+            <textarea bind:value="{inMelding}" name="melding" id="melding" placeholder="Skriv din melding her"></textarea>
         </div>
-        <button type="submit" class="inverted">Send</button>
-        <p class="s op-m">Ved å sende inn skjemaet godtar du vilkårene.</p>
+        <button bind:this="{formBtn}" disabled="{!formFilled}" type="submit" on:click="{sendEmail}" class="inverted">Send</button>
+        <p class="s op-m">Ved å sende inn skjemaet godtar du <u><a href="/personvern">personvernserklæringen.</a></u></p>
     </form>
 </section>
 <div class="img-divider">

@@ -2,12 +2,13 @@
     import { onMount } from "svelte";
     import Reviews from "../../lib/Reviews.svelte";
     import Faq from "../../lib/Faq.svelte";
+    import { browser } from '$app/environment';
+    import emailjs from '@emailjs/browser';
+    import { goto } from '$app/navigation';
+
     let result;
     onMount(() => result = localStorage.getItem('result'))
     let reviewCount = 3;
-
-    let fraHeis = false;
-    let tilHeis = false;
 
     let faqArrayOne = [ 
         null, 
@@ -21,6 +22,71 @@
             'Uforpliktende tilbud': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.'
         }
     ]
+
+    let fraHeis = false;
+    let tilHeis = false;
+
+    let inFraAdresse = '';
+    let inFraPostnummer = '';
+    let inFraEtasje = '';
+    let inTilAdresse = '';
+    let inTilPostnummer = '';
+    let inTilEtasje = '';
+    let inNavn = '';
+    let inEpost = '';
+    let inPrefix = "+47";
+    let inMobilnummer = '';
+    
+
+    let formBtn;
+    let sending = false;
+    let formFilled = false;
+
+    onMount(() => {
+        emailjs.init({
+            publicKey: import.meta.env.VITE_EJS_PKEY,
+        });
+    })
+
+    $: if (browser ) {
+        formFilled = 
+            (inFraAdresse.length>5 && inTilAdresse.length>5) &&
+            (inFraPostnummer && inFraPostnummer.toString().length>2 && inTilPostnummer && inTilPostnummer.toString().length>2) &&
+            (inFraEtasje && inFraEtasje.toString.length>0 && inTilEtasje && inTilEtasje.toString.length>0) &&
+            (inNavn.length>3) && 
+            (inEpost.length>3 && inEpost.includes('@') && inEpost.includes('.')) &&
+            (inPrefix.length>2 && inMobilnummer && inMobilnummer.toString().length>6) &&
+            !sending;
+    }
+    
+    function sendEmail() {
+        if (!formFilled) return;
+        sending = true;
+        formBtn.textContent = "Sender..."
+        emailjs.send("svift_forms","tilbud",{
+            kalkulator: result,
+            fraAdresse: inFraAdresse,
+            fraPostnummer: inFraPostnummer,
+            fraEtasje: inFraEtasje,
+            fraHeis: fraHeis === true ? 'Ja' : 'Nei',
+            tilAdresse: inTilAdresse,
+            tilPostnummer: inTilPostnummer,
+            tilEtasje: inTilEtasje,
+            tilHeis: tilHeis === true ? 'Ja' : 'Nei',
+            navn: inNavn,
+            epost: inEpost,
+            prefix: inPrefix,
+            mobilnummer: inMobilnummer
+        }).then(() => {
+            formBtn.textContent = "Suksess!";
+            sending = false;
+            goto('/suksess');
+        }, (error) => {
+            formBtn.textContent = "Error :(";
+            console.error('Svift | ', error);
+            sending = false;
+        });
+    }
 </script>
 
 <section class="hero">
@@ -36,16 +102,16 @@
         <h2 class="m we-m">Hvor flytter du fra?</h2>
         <div class="divider fw"></div>
         <div class="form-item">
-            <label for="fra-adresse">Adresse</label>
-            <input type="text" id="fra-adresse" placeholder="Karl Johans gate 0">
+            <label for="fra-adresse">Adresse*</label>
+            <input bind:value="{inFraAdresse}" type="text" id="fra-adresse" placeholder="Karl Johans gate 0">
         </div>
         <div class="form-item">
-            <label for="fra-postnummer">Postnummer</label>
-            <input type="number" id="fra-postnummer" placeholder="0265">
+            <label for="fra-postnummer">Postnummer*</label>
+            <input bind:value="{inFraPostnummer}" type="number" id="fra-postnummer" placeholder="0265">
         </div>
         <div class="form-item">
-            <label for="fra-etasje">Etasje</label>
-            <input type="number" id="fra-etasje" placeholder="3">
+            <label for="fra-etasje">Etasje*</label>
+            <input bind:value="{inFraEtasje}" type="number" id="fra-etasje" placeholder="3">
         </div>
         <div class="form-item">
             <label for="fra-heis">Heis</label>
@@ -58,16 +124,16 @@
         <h2 class="s we-m">Hvor flytter du til?</h2>
         <div class="divider fw"></div>
         <div class="form-item">
-            <label for="til-adresse">Adresse</label>
-            <input type="text" id="til-adresse" placeholder="Karl Johans gate 0">
+            <label for="til-adresse">Adresse*</label>
+            <input bind:value="{inTilAdresse}" type="text" id="til-adresse" placeholder="Karl Johans gate 0">
         </div>
         <div class="form-item">
-            <label for="til-postnummer">Postnummer</label>
-            <input type="number" id="til-postnummer" placeholder="0265">
+            <label for="til-postnummer">Postnummer*</label>
+            <input bind:value="{inTilPostnummer}" type="number" id="til-postnummer" placeholder="0265">
         </div>
         <div class="form-item">
-            <label for="til-etasje">Etasje</label>
-            <input type="number" id="til-etasje" placeholder="3">
+            <label for="til-etasje">Etasje*</label>
+            <input bind:value="{inTilEtasje}" type="number" id="til-etasje" placeholder="3">
         </div>
         <div class="form-item">
             <label for="til-heis">Heis</label>
@@ -80,24 +146,22 @@
         <h2 class="s we-m">Informasjon om deg</h2>
         <div class="divider fw"></div>
         <div class="form-item">
-            <label for="name">Navn</label>
-            <input type="text" id="name" placeholder="Ole Gunnarsen">
+            <label for="name">Navn*</label>
+            <input bind:value="{inNavn}" type="text" id="name" placeholder="Ole Gunnarsen">
         </div>
         <div class="form-item">
-            <label for="mail">E-post</label>
-            <input type="email" id="mail" placeholder="ole@mail.com">
+            <label for="mail">E-post*</label>
+            <input bind:value="{inEpost}" type="email" id="mail" placeholder="ole@mail.com">
         </div>
         <div class="form-item">
-            <label for="number">Mobilnummer</label>
+            <label for="number">Mobilnummer*</label>
             <div>
-                <input maxlength="4" type="text" value="+47" placeholder="+47">
-                <input type="number" id="number" placeholder="000 00 000">
-            </div>
-            
+                <input bind:value="{inPrefix}" maxlength="4" type="text" placeholder="+47">
+                <input bind:value="{inMobilnummer}" type="number" id="number" placeholder="000 00 000">
+            </div>            
         </div>
-
-        <button type="submit" class="inverted">Få uforpliktet tilbud</button>
-        <p class="s op-m">Ved å sende inn skjemaet godtar du vilkårene.</p>
+        <button bind:this="{formBtn}" disabled="{!formFilled}" type="submit" on:click="{sendEmail}" class="inverted">Få uforpliktet tilbud</button>
+        <p class="s op-m">Ved å sende inn skjemaet godtar du <u><a href="/personvern">personvernserklæringen.</a></u></p>
     </form>
 </section>
 <div class="img-divider">
@@ -145,7 +209,7 @@
         max-height: 500px;
     }
 
-    u {
+    h1 u {
         text-underline-offset: 8px;
         text-decoration: 3px underline;
     }
