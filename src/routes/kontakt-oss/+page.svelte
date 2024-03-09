@@ -26,12 +26,12 @@
             (inEpost.length>3 && inEpost.includes('@') && inEpost.includes('.')) &&
             !sending
     }
-    
+
     function sendEmail() {
         if (!formFilled) return;
         sending = true;
         formBtn.textContent = "Sender..."
-        emailjs.send("svift_forms","kontakt-oss",{
+        emailjs.send("rosholm_forms","kontakt-oss",{
             navn: inNavn,
             epost: inEpost,
             prefix: inPrefix,

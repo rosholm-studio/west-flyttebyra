@@ -25,6 +25,9 @@
     }
 
     onMount(async () => {
+
+        return;
+
         const cachedReviews = localStorage.getItem('reviews');
         const cachedTimestamp = localStorage.getItem('reviewsTimestamp');
         const now = new Date(); 

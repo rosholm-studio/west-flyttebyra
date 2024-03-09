@@ -27,7 +27,7 @@
             <div class="item">
                 <p class="m we-b">Kontakt</p>
                 <a class="m" href="tel:+4792647084">+47 926 47 084</a>
-                <a href="mailto:post@westflyttebyra.no">post@westflyttebyra.no</a>
+                <a class="m" href="mailto:post@westflyttebyra.no">post@westflyttebyra.no</a>
                 <p class="m">Ole Deviks vei 35,<br/> 0668 Oslo</p>
                 <p class="m">Org nr 918 580 999</p>
             </div>
@@ -42,7 +42,7 @@
     </div>
     <div class="bottom">
         <p class="m">©2024 West Flyttebyrå AS</p>
-        <p class="m">Nettside av <a href="https://svift.studio/" target="_blank"><u>Svift</u>®</a></p>
+        <p class="m">Nettside av <a href="https://rosholm.studio/" target="_blank"><u>Rosholm</u>®</a></p>
     </div>
 </footer>
 

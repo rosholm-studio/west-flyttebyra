@@ -304,6 +304,8 @@ input, textarea {
     outline: 1px solid var(--border-medium);
     border-radius: 10px;
     cursor: text;
+    font-size: var(--text-m);
+    letter-spacing: var(--spacing-m);
 }
 
 input[type="button"] {

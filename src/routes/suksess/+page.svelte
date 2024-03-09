@@ -24,13 +24,13 @@
 <div class="img-divider">
     <img src="/placeholder_tilbud.png" alt="Happy customer">
 </div>
-<section class="reviews">
+<!-- <section class="reviews">
     <div class="reviews-text">
         <h2 class="we-m">Ofte anbefalt av kunder</h2>
         <p class="ml">Alt arbeidet du selv synes er vanskelig og krevende utfører vi. Enten du bare ønsker flytting, eller hjelp med hele prosessen.</p>
     </div>    
     <Reviews {reviewCount} />
-</section>
+</section> -->
 <section class="info">
     <div class="info-container">
         <div class="item">

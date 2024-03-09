@@ -104,13 +104,13 @@
     </div>
     <Faq faqArray={faqArrayOne} />
 </section>
-<section class="reviews">
+<!-- <section class="reviews">
     <div class="reviews-text">
         <h2 class="we-m">Ofte anbefalt av kunder</h2>
         <p class="ml">Alt arbeidet du selv synes er vanskelig og krevende utfører vi. Enten du bare ønsker flytting, eller hjelp med hele prosessen.</p>
     </div>    
     <Reviews {reviewCount} />
-</section>
+</section> -->
 <section class="cta">
     <div class="cta-container">
         <div class="rabatt btn-inverted btn-small">10% rabatt idag 🎉</div>
