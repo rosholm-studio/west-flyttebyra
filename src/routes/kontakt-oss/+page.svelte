@@ -1,3 +1,8 @@
+<svelte:head>
+    <title>Kontakt Oss - West Flyttebyrå</title>
+    <meta name="description" content="Vi er et flyttebyrå i Oslo med 30 års erfaring og mange gode kunde referanser. Ta kontakt med oss idag for å få tilbud på din neste flytting i Oslo.">
+</svelte:head>
+
 <script>
     import { browser } from '$app/environment';
     import emailjs from '@emailjs/browser';

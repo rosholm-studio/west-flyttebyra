@@ -1,3 +1,10 @@
+<svelte:head>
+    <title>Tilbud - West Flyttebyrå</title>
+    <meta name="description" content="Skal du flytte? Vi gir deg kjempe gode tilbud på flytting i Oslo. Vi er et flyttbyrå med 30 års erfaring og mange gode kundereferanser. Få tilbud idag!
+    ">
+</svelte:head>
+
+
 <script>
     import { onMount } from "svelte";
     import Reviews from "../../lib/Reviews.svelte";

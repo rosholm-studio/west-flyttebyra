@@ -1,3 +1,9 @@
+<svelte:head>
+    <title>Flyttekalkulator - West Flyttebyrå</title>
+    <meta name="description" content="Prøv ut vår nye flyttekalkulator for å få et personlig tilbud på flytting din. West Flyttebyrå er ditt flyttebyrå i Oslo.
+    ">
+</svelte:head>
+
 <script>
     import Calculator from "../../lib/Calculator.svelte";
     let items = [

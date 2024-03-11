@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Suksess - West Flyttebyrå</title>
+</svelte:head>
+
 <script>
     import Reviews from "../../lib/Reviews.svelte";
     import Faq from "../../lib/Faq.svelte";

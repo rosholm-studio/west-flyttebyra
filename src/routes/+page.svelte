@@ -1,3 +1,8 @@
+<svelte:head>
+    <title>West Flyttebyrå - Ditt flyttebyrå i Oslo</title>
+    <meta name="description" content="Vi er et flyttebyrå i Oslo med lang erfaring og en rekke fornøyde kunder. Skal du flytte i Oslo? Vi gjør det enkelt og rimelig for deg å flytte. Få et gratis tilbud idag.">
+</svelte:head>
+
 <script>
     import Faq from "../lib/Faq.svelte";
     import Reviews from "../lib/Reviews.svelte";

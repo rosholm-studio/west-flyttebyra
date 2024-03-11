@@ -1,3 +1,8 @@
+<svelte:head>
+    <title>Om Oss - West Flyttebyrå</title>
+    <meta name="description" content="West Flyttebyrå er et flyttebyrå i Oslo med 30 års erfaring og gode referanser. Vi er åpent døgnet rundt og hjelper deg med flytting i Oslo når du trenger det.">
+</svelte:head>
+
 <script>
     import Faq from "../../lib/Faq.svelte";
 

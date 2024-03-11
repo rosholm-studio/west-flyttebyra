@@ -1,3 +1,8 @@
+<svelte:head>
+    <title>Personvern - West Flyttebyrå</title>
+    <meta name="description" content="Vi bruker cookies for å gi deg den beste opplevelsen på våre sider.">
+</svelte:head>
+
 <section>
     <h1 class="we-b">Personvern</h1>
     <div class="text">
