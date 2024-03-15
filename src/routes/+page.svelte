@@ -11,27 +11,24 @@
     let faqArrayOne = [ 
         null, 
         {
-            'Effektiv flytting': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.',
-            'Tar vare på tingene dine': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.',
-            'Sikkerhet': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.',
-            'Rask kommunikasjon': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.',
-            'God kundeservice': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.',
-            'Pålitelig': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.',
-            'Uforpliktende tilbud': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.'
+            'Erfaring': 'Med tre tiår med erfaring i bransjen bringer vi enestående ekspertise og kunnskap til hvert eneste flytt.',
+            'Kundefokus': 'Vår forpliktelse til kundetilfredshet driver alt vi gjør. Vi prioriterer dine behov og sikrer åpen kommunikasjon gjennom hele flytteprosessen.',
+            'Effektivitet': 'Vi forstår at flytting kan være stressende. Derfor streber vi etter å gjøre prosessen så jevn og effektiv som mulig, og sparer deg for tid og energi.',
+            'Profesjonalitet': 'Vårt team består av opplærte fagpersoner som behandler eiendelene dine med største forsiktighet og respekt. Fra pakking til transport sikrer vi en profesjonell tilnærming på hvert trinn.'
         }
     ]
 
     let faqArrayTwo = [
         true, 
         {
-            'Trenger jeg å være til stede under flyttingen?': 'Alle verdifulle møbler blir tatt hånd om med ekstrem forsiktighet. Vi har alltid med oss spesielle bokser, tepper og ekstra embalasje i tilfelle noe er pakket feil, eller om noe skulle trenge å bli ekstra sikkret under flyttingen.',
-            'Må jeg demontere møblene?': 'Alle verdifulle møbler blir tatt hånd om med ekstrem forsiktighet. Vi har alltid med oss spesielle bokser, tepper og ekstra embalasje i tilfelle noe er pakket feil, eller om noe skulle trenge å bli ekstra sikkret under flyttingen.',
-            'Kan jeg spore bilen møblene blir fraktet med?': 'Alle verdifulle møbler blir tatt hånd om med ekstrem forsiktighet. Vi har alltid med oss spesielle bokser, tepper og ekstra embalasje i tilfelle noe er pakket feil, eller om noe skulle trenge å bli ekstra sikkret under flyttingen.',
+            'Trenger jeg å være til stede under flyttingen?': 'Nei, som regel trenger man ikke å være det. Alt vil da bli flyttet ut i fra avtalen vi på forhånd har utarbeidet.',
+            'Må jeg demontere møblene?': 'Som oftes må møblene demonteres. Dette er grunnet at møblene kan lett gå i stykker under transportprossesen. West Flyttebyrå tilbyr å demontere noen av møblene, men skulle det trenges å demontere et helt lokale må det på forhånd oppgis informasjon til oss.',
+            'Kan jeg spore bilen møblene blir fraktet med?': 'Det er mulig å spore bilen møblene blir fraktet med ved å ringe flyttebyråets nummer, eller sjøførens privat tlf.',
             'Hvordan håndteres verdifulle møbler under flyttingen?': 'Alle verdifulle møbler blir tatt hånd om med ekstrem forsiktighet. Vi har alltid med oss spesielle bokser, tepper og ekstra embalasje i tilfelle noe er pakket feil, eller om noe skulle trenge å bli ekstra sikkret under flyttingen.',
-            'En gjenstand har blitt ødelagt, hva gjør jeg?': 'Alle verdifulle møbler blir tatt hånd om med ekstrem forsiktighet. Vi har alltid med oss spesielle bokser, tepper og ekstra embalasje i tilfelle noe er pakket feil, eller om noe skulle trenge å bli ekstra sikkret under flyttingen.',
-            'Hvordan funker forsikringen min?': 'Alle verdifulle møbler blir tatt hånd om med ekstrem forsiktighet. Vi har alltid med oss spesielle bokser, tepper og ekstra embalasje i tilfelle noe er pakket feil, eller om noe skulle trenge å bli ekstra sikkret under flyttingen.',
-            'Hva slags vaskeutstyr blir brukt under renhold?': 'Alle verdifulle møbler blir tatt hånd om med ekstrem forsiktighet. Vi har alltid med oss spesielle bokser, tepper og ekstra embalasje i tilfelle noe er pakket feil, eller om noe skulle trenge å bli ekstra sikkret under flyttingen.',
-            'Jeg har flere møbler enn planlagt jeg skal flytte, hva gjør jeg?': 'Alle verdifulle møbler blir tatt hånd om med ekstrem forsiktighet. Vi har alltid med oss spesielle bokser, tepper og ekstra embalasje i tilfelle noe er pakket feil, eller om noe skulle trenge å bli ekstra sikkret under flyttingen.'
+            'En gjenstand har blitt ødelagt, hva gjør jeg?': 'Hvis en gjenstand har blitt ødelagt eller borte, tar man umidelbart kontakt med flyttebyrået slik at man finner ut hva som har skjedd på stedet.',
+            'Hvordan funker forsikringen min?': 'Det er viktig å forsikre seg slik at man unngår uheldige oppståtte situasjoner. West Flyttebyrå har godsansvarsforsikring på alle våre biler.Vi anbefaler alle kunder på det sterkeste å tegne transportforsikring, som dekker hele flytteprosessen, inklusiv inn / ut lasting av hus og bil. Det betyr at du er forsikret mot tyveri og skade til enhver tid.Enkelgjenstander med en verdi over kr. 20.000 – må spesifiseres.',
+            'Hva slags vaskeutstyr blir brukt under renhold?': 'Alt vaskeutstyr brukt under jobben er HMS godkjent av byrået. Før jobben blir alle kjemikalene inspisert, slik at det ikke skal oppstå noen helsefarlige situasjoner under og etter at arbeidet er utført.',
+            'Jeg har flere møbler enn planlagt jeg skal flytte, hva gjør jeg?': 'Som oftes tas de med den planlagte flyttebilen hvis det ikke er for mange av dem. Vi planlegger alltid slik at det er plass igjen bak i bilen. Hvis det derimot blir for mange møbler enn planlagt må vi kjøre flere ganger, eller komme med en ekstra bil om mulig.'
         }
     ]
 

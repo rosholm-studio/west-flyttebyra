@@ -10,13 +10,10 @@
     let faqArrayOne = [ 
         null, 
         {
-            'Effektiv flytting': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.',
-            'Tar vare på tingene dine': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.',
-            'Sikkerhet': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.',
-            'Rask kommunikasjon': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.',
-            'God kundeservice': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.',
-            'Pålitelig': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.',
-            'Uforpliktende tilbud': 'Vi er tilgjengelige døgnet rundt om det skulle være noe du trenger hjelp med.'
+            'Erfaring': 'Med tre tiår med erfaring i bransjen bringer vi enestående ekspertise og kunnskap til hvert eneste flytt.',
+            'Kundefokus': 'Vår forpliktelse til kundetilfredshet driver alt vi gjør. Vi prioriterer dine behov og sikrer åpen kommunikasjon gjennom hele flytteprosessen.',
+            'Effektivitet': 'Vi forstår at flytting kan være stressende. Derfor streber vi etter å gjøre prosessen så jevn og effektiv som mulig, og sparer deg for tid og energi.',
+            'Profesjonalitet': 'Vårt team består av opplærte fagpersoner som behandler eiendelene dine med største forsiktighet og respekt. Fra pakking til transport sikrer vi en profesjonell tilnærming på hvert trinn.'
         }
     ]
 </script>
