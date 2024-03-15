@@ -26,7 +26,7 @@
     <p class="m">Vi gleder oss til å høre om dine flytteplaner!</p>
 </section>
 <div class="img-divider">
-    <img src="/placeholder_tilbud.png" alt="Happy customer">
+    <img src="/happy.webp" alt="West flyttbyrå hjelper deg med flytting i oslo området">
 </div>
 <!-- <section class="reviews">
     <div class="reviews-text">

@@ -40,7 +40,7 @@
         </div>
         
         <div class="btns">
-            <a href="tel:+4792647084"><button class="btn-tertiary m">+47 926 47 084</button></a>
+            <a href="tel:+4748905000"><button class="btn-tertiary m">+47 489 05 000</button></a>
             <a href="/flyttekalkulator"><button class="btn-inverted m">Flyttekalkulator</button></a>
         </div>
     </div>
@@ -205,9 +205,9 @@
         gap: 8px;
     }
 
-    .hide {
+    /* .hide {
         display: none;
-    }
+    } */
 
     @media screen and (min-width: 350px) {
         .container .btns button:first-child {
@@ -215,7 +215,7 @@
         }
     }
 
-    @media screen and (min-width: 370px) {
+    /* @media screen and (min-width: 370px) {
         .info-time {
             display: -webkit-box !important;
             display: -ms-flexbox !important;
@@ -229,14 +229,14 @@
             display: -ms-flexbox !important;
             display: flex !important;
         }
-    }
+    } */
 
     @media screen and (min-width: 1000px) {
-        .hide {
+        /* .hide {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-        }
+        } */
 
         .burger {
             display: none;

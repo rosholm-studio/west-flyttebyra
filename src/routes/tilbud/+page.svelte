@@ -185,7 +185,7 @@
     </form>
 </section>
 <div class="img-divider">
-    <img src="/placeholder_tilbud.png" alt="Happy client">
+    <img src="/happy.webp" alt="West flyttbyrå hjelper deg med flytting i oslo området">
 </div>
 <!-- <section class="reviews">
     <div class="reviews-text">
@@ -297,7 +297,7 @@
         display: none;
     }
 
-    .reviews {
+    /* .reviews {
         padding: 40px 16px;
         background: var(--secondary-color);
         display: -webkit-box;
@@ -333,8 +333,7 @@
 
     .reviews-text p {
         max-width: 480px;
-    }
-
+    } */
 
     .faq {
         padding: var(--gap-medium) 20px;

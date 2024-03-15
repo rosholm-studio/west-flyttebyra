@@ -8,39 +8,224 @@
     import Calculator from "../../lib/Calculator.svelte";
     let items = [
         {
-            image: 'bed.svg',
+            image: 'seng.svg',
             title: 'Seng',
-            size: 2
+            size: 1.2
         },
         {
-            image: 'sofa.svg',
-            title: 'Sofa',
-            size: 1.4
+            image: 'dobbelseng.svg',
+            title: 'Dobbelseng',
+            size: 2.4
+        },
+        {
+            image: 'tv.svg',
+            title: 'TV',
+            size: 0.5
+        },
+        {
+            image: 'tørketrommel.svg',
+            title: 'Tørketrommel',
+            size: 0.6
+        },
+        {
+            image: 'vaskemaskin.svg',
+            title: 'Vaskemaskin',
+            size: 0.6
+        },
+        {
+            image: 'oppvaskmaskin.svg',
+            title: 'Oppvaskmaskin',
+            size: 0.6
+        },
+        {
+            image: 'kjøleskap.svg',
+            title: 'Kjøleskap',
+            size: 0.6
+        },
+        {
+            image: 'komfyr.svg',
+            title: 'Komfyr',
+            size: 0.6
+        },
+        {
+            image: 'mikrobølgeovn.svg',
+            title: 'Mikrobølgeovn',
+            size: 0.2
+        },
+        {
+            image: 'støvsuger.svg',
+            title: 'Støvsuger',
+            size: 0.3
+        },
+        {
+            image: 'stereoanlegg.svg',
+            title: 'Stereoanlegg',
+            size: 0.3
+        },
+        {
+            image: 'høytalere.svg',
+            title: 'Høytalere',
+            size: 0.2
+        },
+        {
+            image: 'skjenk.svg',
+            title: 'Skjenk',
+            size: 0.5
+        },
+        {
+            image: 'garderobeskap.svg',
+            title: 'Garderobeskap',
+            size: 0.3
+        },
+        {
+            image: 'bokhylle.svg',
+            title: 'Bokhylle',
+            size: 0.3
         },
         {
             image: 'spisebord.svg',
             title: 'Spisebord',
-            size: 0.8
+            size: 0.6
         },
         {
-            image: 'hoytalere.svg',
-            title: 'Høytalere',
+            image: 'salongbord.svg',
+            title: 'Salongbord',
+            size: 0.4
+        },
+        {
+            image: 'skrivebord.svg',
+            title: 'Skrivebord',
+            size: 0.4
+        },
+        {
+            image: 'sidebord.svg',
+            title: 'Sidebord',
+            size: 0.1
+        },
+        {
+            image: 'speil.svg',
+            title: 'Speil',
+            size: 0.1
+        },
+        {
+            image: 'bilde.svg',
+            title: 'Bilde',
+            size: 0.1
+        },
+        {
+            image: '2-3-seter_sofa.svg',
+            title: '2-3-seter sofa',
+            size: 1
+        },
+        {
+            image: 'hjørnesofa.svg',
+            title: 'Hjørnesofa',
+            size: 1.5
+        },
+        {
+            image: 'lenestol.svg',
+            title: 'Lenestol',
+            size: 0.3
+        },
+        {
+            image: 'stol.svg',
+            title: 'Stol',
+            size: 0.2
+        },
+        {
+            image: 'gulvlampe.svg',
+            title: 'Gulvlampe',
             size: 0.2
         },
         {
             image: 'sykkel.svg',
             title: 'Sykkel',
-            size: 0.4
+            size: 0.5
         },
         {
-            image: 'gulvlampe.svg',
-            title: 'Gulvlampe',
-            size: 0.4
+            image: 'ski.svg',
+            title: 'Ski',
+            size: 0.1
         },
         {
-            image: 'flytteboks.svg',
-            title: 'Flytteboks',
+            image: 'barneseng.svg',
+            title: 'Barneseng',
+            size: 0.6
+        },
+        {
+            image: 'nattbord.svg',
+            title: 'Nattbord',
             size: 0.2
+        },
+        {
+            image: 'piano.svg',
+            title: 'Piano',
+            size: 2.5
+        },
+        {
+            image: 'klokke.svg',
+            title: 'Klokke',
+            size: 0.5
+        },
+        {
+            image: 'lamper.svg',
+            title: 'Lamper',
+            size: 0.4
+        },
+        {
+            image: 'lysekrone.svg',
+            title: 'Lysekrone',
+            size: 0.5
+        },
+        {
+            image: 'pc.svg',
+            title: 'PC',
+            size: 0.5
+        },
+        {
+            image: 'teppe.svg',
+            title: 'Teppe',
+            size: 0.3
+        },
+        {
+            image: 'radio.svg',
+            title: 'Radio',
+            size: 0.1
+        },
+        {
+            image: 'fryser.svg',
+            title: 'Fryser',
+            size: 1.2
+        },
+        {
+            image: 'barnevogn.svg',
+            title: 'Barnevogn',
+            size: 0.5
+        },
+        {
+            image: 'bildekk.svg',
+            title: 'Bildekk',
+            size: 0.2
+        },
+        {
+            image: 'hageredskap.svg',
+            title: 'Hageredskap',
+            size: 0.3
+        },
+        {
+            image: 'hagebord.svg',
+            title: 'Hagebord',
+            size: 0.2
+        },
+        {
+            image: 'hagestol.svg',
+            title: 'Hagestol',
+            size: 0.2
+        },
+        {
+            image: 'esker.svg',
+            title: 'Esker',
+            size: 2
         }
     ];
     
@@ -56,7 +241,7 @@
     <Calculator calculatorItems={items} />
 </section>
 <div class="img-container">
-    <img src="/placeholder_calculator.png" alt="">
+    <img src="/calculator.webp" alt="West flyttebyrå under flytting i oslo">
 </div>
 
 

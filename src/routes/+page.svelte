@@ -49,7 +49,7 @@
         </div>
     </div>
     <div class="landing-image">
-        <img src="/placeholder.jfif" alt="">
+        <img src="/landing.webp" alt="West flyttebyrå er ditt flyttebyrå i oslo">
     </div>
 </section>
 <section class="content">
@@ -128,7 +128,7 @@
     
 </section>
 <section class="img-divider">
-    <img src="/placeholder.png" alt="filled moving truck">
+    <img src="/balcony.webp" alt="West flyttebyrå under flytting med kran">
 </section>
 <section class="faq inverted">
     <div class="faq-header">
@@ -452,38 +452,7 @@
         max-width: 550px;
     }
 
-    .faq-bottom {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        gap: 20px;
-    }
-
-    .faq-btns {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        text-align: center;
-        gap: 8px;
-        width: 100%;
-    }
-
-    .reviews {
+    /* .reviews {
         padding: 40px 16px;
         background: var(--secondary-color);
         display: -webkit-box;
@@ -519,7 +488,7 @@
 
     .reviews-text p {
         max-width: 480px;
-    }
+    } */
 
     .cta {
         display: -webkit-box;
@@ -602,10 +571,10 @@
             letter-spacing: var(--spacing-xxxl);
         }
 
-        .reviews-text h2 {
+        /* .reviews-text h2 {
             font-size: var(--text-xxxl);
             letter-spacing: var(--spacing-xxxl);
-        }
+        } */
 
         .landing-content h1 {
             font-size: var(--text-display);
@@ -653,14 +622,14 @@
                     align-items: center;
         }
 
-        .faq-btns {
+        /* .faq-btns {
             -ms-flex-wrap: nowrap;
                 flex-wrap: nowrap;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
             max-width: 400px;
-        }
+        } */
     }
 
 </style>

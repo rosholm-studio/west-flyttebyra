@@ -23,7 +23,7 @@
         <p>Med over 30 års erfaring har vi etablert oss som et ledende flyttebyrå i Oslo, dedikert til å tilby effektive, pålitelige og rimelige flyttetjenester skreddersydd for å møte dine behov.</p>
     </div>
     <div class="hero-content">
-        <img src="/placeholder_about.png" alt="Unloaded truck">
+        <img src="/truck.webp" alt="west flyttebyrå under flytting oslo">
         <div class="hero-text">
             <h2 class="we-m xxxl">Vår Forpliktelse</h2>
             <p>Siden oppstarten har vi prioritert å håndtere eiendelene dine med forsiktighet og presisjon samtidig som vi sikrer en sømløs overgang til din nye destinasjon. Pakking og flytting er kjerneområdene for vår ekspertise, og vi har utvidet tjenestene våre for å inkludere lagring og rengjøring, rettet mot både private og kommersielle kunder.</p>
@@ -42,7 +42,7 @@
     <Faq faqArray={faqArrayOne} />
 </section>
 <section class="img-divider">
-    <img src="/placeholder_about2.png" alt="Home with furniture">
+    <img src="/balcony.webp" alt="West flyttebyrå under flytting med kran">
 </section>
 
 <style>

@@ -26,16 +26,15 @@
             </div>
             <div class="item">
                 <p class="m we-b">Kontakt</p>
-                <a class="m" href="tel:+4792647084">+47 926 47 084</a>
+                <a class="m" href="tel:+4748905000">+47 489 05 000</a>
                 <a class="m" href="mailto:post@westflyttebyra.no">post@westflyttebyra.no</a>
                 <p class="m">Ole Deviks vei 35,<br/> 0668 Oslo</p>
                 <p class="m">Org nr 918 580 999</p>
             </div>
             <div class="item">
                 <p class="m we-b">Sosialt</p>
-                <a class="m" href="/">Facebook</a>
-                <a class="m" href="/">Instagram</a>
-                <p class="m" href="/">Linkedin</p>
+                <a class="m" href="https://www.facebook.com/Westflyttebyra.no" target="_blank">Facebook</a>
+                <a class="m" href="https://www.instagram.com/westflyttebyra" target="_blank">Instagram</a>
             </div>
         </div>
         <button on:click|preventDefault={scrollUp} class="m up btn-unset">Tilbake til toppen <img class="arrow" src="/arrow.svg" alt="Arrow up"></button>
