@@ -63,7 +63,7 @@
         <div class="hero-item">
             <img src="/icons/phone_inverted.svg" alt="Phone">
             <p class="xl we-r">Telefonnummer</p>
-            <p class="op-h">+47 926 47 084</p>
+            <p class="op-h">+47 489 05 000</p>
         </div>
         <div class="hero-item">
             <img src="/icons/mail_inverted.svg" alt="Mail letter">
