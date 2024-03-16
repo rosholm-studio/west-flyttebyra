@@ -41,7 +41,7 @@
     </div>
     <div class="bottom">
         <p class="m">©2024 West Flyttebyrå AS</p>
-        <p class="m">Nettside av <a href="https://rosholm.studio/" target="_blank"><u>Rosholm</u>®</a></p>
+        <p class="m">Nettside av <a href="https://rosholm.studio/west"><u>Røsholm</u>®</a></p>
     </div>
 </footer>
 
