@@ -93,7 +93,7 @@
     }
 
     .reviews {
-        padding: 40px 16px;
+        padding: 80px 16px 20px 16px;
         background: var(--secondary-color);
         display: -webkit-box;
         display: -ms-flexbox;
