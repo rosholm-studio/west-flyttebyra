@@ -69,8 +69,8 @@
                     <p bind:this="{comments[i]}" class:cut={!expanded[i]} class="comment m we-r">{review.text}</p>
                     <div class="btns">
                         <button on:click|preventDefault="{() => {expanded[i] = !expanded[i]; adaptHeight()}}" class:hide="{isExpandable[i]}" class="btn-unset op-h s">
-                            {#if !expanded[i]}Show more{/if}
-                            {#if expanded[i]}Show less{/if}
+                            {#if !expanded[i]}Les mer{/if}
+                            {#if expanded[i]}Les mer{/if}
                         </button>
                         <a href="https://www.google.com/maps/place/West+Flyttebyrå+AS" target="_blank"><img src="/icons/google.svg" alt="Google"></a>
                     </div>
