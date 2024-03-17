@@ -63,12 +63,12 @@
         <div class="hero-item">
             <img src="/icons/phone_inverted.svg" alt="Phone">
             <p class="xl we-r">Telefonnummer</p>
-            <p class="op-h">+47 926 47 084</p>
+            <a class="op-h" href="tel:+4748905000">+47 489 05 000</a>
         </div>
         <div class="hero-item">
             <img src="/icons/mail_inverted.svg" alt="Mail letter">
             <p class="xl we-r">E-post</p>
-            <p class="op-h">post@westflyttebyra.no</p>
+            <a class="op-h" href="mailto:post@westflyttebyra.no">post@westflyttebyra.no</a>
         </div>
         <div class="hero-item">
             <img src="/icons/pin.svg" alt="Address pin">
