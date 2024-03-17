@@ -15,7 +15,6 @@
 
     let result;
     onMount(() => result = localStorage.getItem('result'))
-    let reviewCount = 3;
 
     let faqArrayOne = [ 
         null, 
@@ -184,13 +183,13 @@
 <div class="img-divider">
     <img src="/happy.webp" alt="West flyttbyrå hjelper deg med flytting i oslo området">
 </div>
-<!-- <section class="reviews">
+<section class="reviews">
     <div class="reviews-text">
         <h2 class="we-m">Ofte anbefalt av kunder</h2>
         <p class="ml">Alt arbeidet du selv synes er vanskelig og krevende utfører vi. Enten du bare ønsker flytting, eller hjelp med hele prosessen.</p>
     </div>    
-    <Reviews {reviewCount} />
-</section> -->
+    <Reviews />
+</section>
 <section class="info">
     <div class="info-container">
         <div class="item">
@@ -294,7 +293,7 @@
         display: none;
     }
 
-    /* .reviews {
+    .reviews {
         padding: 40px 16px;
         background: var(--secondary-color);
         display: -webkit-box;
@@ -330,7 +329,7 @@
 
     .reviews-text p {
         max-width: 480px;
-    } */
+    }
 
     .faq {
         padding: var(--gap-medium) 20px;

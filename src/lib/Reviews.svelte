@@ -1,12 +1,7 @@
 <script>
-    import { onMount } from "svelte";
     import Carousel from "svelte-flickity";
+    import reviews from '$lib/reviews.json';
 
-    let reviews = [];
-    const apiKey = 'AIzaSyDi43xtjtLKrru8XIqPx0uu06FWT1HnnyY';
-    const placeId = 'ChIJwTEuTd1vQUYR8uFah9AB9Cw';
-
-    export let reviewCount = 1;
     let comments = [];
     let isExpandable = [];
     let expanded = [];
@@ -23,36 +18,6 @@
             isExpandable[index] = (item.clientHeight === item.scrollHeight)
         })
     }
-
-    onMount(async () => {
-
-        return;
-
-        const cachedReviews = localStorage.getItem('reviews');
-        const cachedTimestamp = localStorage.getItem('reviewsTimestamp');
-        const now = new Date(); 
-        if (cachedReviews && cachedTimestamp) {
-            const lastFetched = new Date(cachedTimestamp);
-            const diffInHours = (now - lastFetched) / (1000 * 60 * 60); 
-            if (diffInHours < 24) {
-                console.log('Fetching from storage') 
-                reviews = JSON.parse(cachedReviews);
-                return;
-            }
-        }
-        console.log('fetching from API')
-        const googleApiUrl = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&reviews_no_translations=true&key=${apiKey}`;
-        const response = await fetch(`${googleApiUrl}`);
-        if (response.ok) {
-            const data = await response.json();
-            reviews = data.result.reviews; 
-            localStorage.setItem('reviews', JSON.stringify(reviews));
-            localStorage.setItem('reviewsTimestamp', now.toISOString());
-        } else {
-            console.error('Failed to fetch reviews');
-        }
-        
-    });
 
     const options = {
         pageDots: false,
@@ -86,7 +51,7 @@
             {#each reviews as review, i (review.author_name)}
                 <div bind:this={cells[i]} class="item carousel-cell">
                     <div class="profile">
-                        <img src="{imageSrc(review.profile_photo_url)}" alt="{review.author_name}'s profile picture">
+                        <img src="/reviews/photo_{i+1}.png" alt="{review.author_name}'s profile picture">
                         <div class="info">
                             <a href="{review.author_url}" target="_blank" class="s we-m">{review.author_name}</a>
                             <p class="s we-r">{review.relative_time_description}</p>
