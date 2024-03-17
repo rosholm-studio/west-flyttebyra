@@ -448,7 +448,7 @@
     }
 
     .reviews {
-        padding: 40px 16px;
+        padding: 80px 16px 20px 16px;
         background: var(--secondary-color);
         display: -webkit-box;
         display: -ms-flexbox;
@@ -480,6 +480,8 @@
         font-size: var(--text-xl);
         letter-spacing: var(--spacing-xl);
     }
+
+    
 
     .reviews-text p {
         max-width: 480px;
@@ -566,10 +568,10 @@
             letter-spacing: var(--spacing-xxxl);
         }
 
-        /* .reviews-text h2 {
+        .reviews-text h2 {
             font-size: var(--text-xxxl);
             letter-spacing: var(--spacing-xxxl);
-        } */
+        }
 
         .landing-content h1 {
             font-size: var(--text-display);
