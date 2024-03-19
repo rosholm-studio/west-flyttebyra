@@ -37,7 +37,7 @@
 <section class="landing">
     <div class="landing-content">
         <div class="rabatt btn-small btn-inverted">10% rabatt idag 🎉</div>
-        <h1 class="we-b">West flyttebyrå er ditt flyttebyrå i Oslo</h1>
+        <h1 class="we-b">West Flyttebyrå er ditt flyttebyrå i Oslo</h1>
         <div class="landing-btn">
             <a href="/flyttekalkulator"><button>Flyttekalkulator</button></a>
             <p class="s op-h">La oss finne den beste prisen til deg</p>
