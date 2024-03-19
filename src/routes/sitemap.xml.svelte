@@ -37,6 +37,11 @@
   <lastmod>2024-03-19T10:11:46+00:00</lastmod>
   <priority>0.64</priority>
 </url>
+<url>
+  <loc>https://westflyttebyra.no/suksess</loc>
+  <lastmod>2024-03-19T10:11:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 
 
 </urlset>
