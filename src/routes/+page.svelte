@@ -37,7 +37,7 @@
 <section class="landing">
     <div class="landing-content">
         <div class="rabatt btn-small btn-inverted">10% rabatt idag 🎉</div>
-        <h1 class="we-b">Vi gjør det <div class="op-m">enkelt</div> og <div class="op-m">rimelig</div> for deg å flytte i Oslo-området</h1>
+        <h1 class="we-b">West flyttebyrå er ditt flyttebyrå i Oslo</h1>
         <div class="landing-btn">
             <a href="/flyttekalkulator"><button>Flyttekalkulator</button></a>
             <p class="s op-h">La oss finne den beste prisen til deg</p>
@@ -49,7 +49,7 @@
 </section>
 <section class="content">
     <div class="content-text">
-        <h2 class="xl we-m">West flyttebyrå er ditt flyttebyrå i Oslo</h2>
+        <h2 class="xl we-m">Vi gjør det enkelt og rimelig for deg å flytte i Oslo</h2>
         <p class="m">Vi er et flyttebyrå i Oslo med lang erfaring og en rekke fornøyde kunder. Helt siden starten har vårt hovedmål vært å behandle flyttegods med omtanke og forsiktighet. Samtidig som at vi sørger for en rask og smidig gjennomføring av flytteoppdraget.</p>
     </div>
     <div class="content-info">
