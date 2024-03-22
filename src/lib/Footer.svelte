@@ -41,7 +41,7 @@
     </div>
     <div class="bottom">
         <p class="m">©2024 West Flyttebyrå AS</p>
-        <p class="m">Nettside av Røsholm®</p>
+        <p class="m">Nettside av <span><a href="http://rosholm.studio" class="underline">Røsholm</a>®</span></p>
     </div>
 </footer>
 
@@ -180,5 +180,9 @@
         .items {
             gap: 87px;
         }
+    }
+
+    .underline {
+        text-decoration: underline;
     }
 </style>
